@@ -1,0 +1,613 @@
+Root element:rss
+
+Current Element :item
+Title : 13305 - IPS : Oprava a údrba detskıch ihrísk, športovísk a mestského mobiliáru
+Description : VVO 190/2018 13305
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388400
+guid : notice-388400
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13306 - WYP : Zvıšenie kapacity Materskej škôlky v obci Teplièka nad Váhom
+Description : VVO 190/2018 13306
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388403
+guid : notice-388403
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13307 - WYT : Vybavenie odbornıch uèební v ZŠ Spišská Nová Ves
+Description : VVO 190/2018 13307
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388401
+guid : notice-388401
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13310 - WYT : Nákup strojového vybavenia pre zabezpeèenie èinnosti regionálneho centra vzdelávania pri SOŠ TAP
+Description : VVO 190/2018 13310
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388413
+guid : notice-388413
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13311 - IPP : Energetická úspora budovy školy
+Description : VVO 190/2018 13311
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388363
+guid : notice-388363
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13312 - WYP : Spišskı Jeruzalem, SO 06 ODSTAVNÁ A PARKOVACIA PLOCHA, SPIŠSKÁ KAPITULA
+Description : VVO 190/2018 13312
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388412
+guid : notice-388412
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13313 - IPP : Komunitné centrum Kapušianske K¾aèany
+Description : VVO 190/2018 13313
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388411
+guid : notice-388411
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13314 - DOP : Komplexné riešenie školského areálu Trenèín - Zámostie - 1. etapa: SOŠ Stavebná
+Description : VVO 190/2018 13314
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388358
+guid : notice-388358
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13315 - IPP : VYBUDOVANIE LABORATÓRIA INVÁZNYCH DRUHOV VO VÄZBE NA REKONŠTRUKCIU PODKROVIA BUDOVY LOS A PRIPOJENIE OBJEKTU NA NET OPTICKİM KÁBLOM
+Description : VVO 190/2018 13315
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388362
+guid : notice-388362
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13316 - IPT : Dodanie a montá laserového páliaceho stroja
+Description : VVO 190/2018 13316
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388364
+guid : notice-388364
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13317 - WYP : „Mestskı úrad Leopoldov – búracie práce “
+Description : VVO 190/2018 13317
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388365
+guid : notice-388365
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13318 - WYP : Modernizácia, prevádzka a údrba sústavy verejného osvetlenia v obci Hrabušice
+Description : VVO 190/2018 13318
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388383
+guid : notice-388383
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13319 - WYP : Obnova Kláštora v Hronskom Beòadiku – Biskupstvo Nitra
+Description : VVO 190/2018 13319
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388386
+guid : notice-388386
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13320 - WYS : Príleitostné spoloèné obstarávanie poistnıch sluieb – ¼ubovnianske RZMO
+Description : VVO 190/2018 13320
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388384
+guid : notice-388384
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13321 - WYT : Podpora predchádzania vzniku biologicky rozloite¾nıch komunálnych odpadov v Tvrdošíne
+Description : VVO 190/2018 13321
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388381
+guid : notice-388381
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13322 - WYT : Dodanie a montá laserového páliaceho stroja
+Description : VVO 190/2018 13322
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388382
+guid : notice-388382
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13323 - WYT : Vırobná technológia - plniaca linka pre ZPD - Zeleninársko potravinárske drustvo
+Description : VVO 190/2018 13323
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388385
+guid : notice-388385
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13324 - WYT : Zlepšenie k¾úèovıch kompetencií iakov – Základná škola Mierová 134 a Základná škola Komenského vo Svite
+Description : VVO 190/2018 13324
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388387
+guid : notice-388387
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13325 - WYT : Zlepšenie k¾úèovıch kompetencií iakov základnej školy, Bystré 347
+Description : VVO 190/2018 13325
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388388
+guid : notice-388388
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13326 - WYT : Vybavenie odbornıch uèební – ZŠ s MŠ Plaveè
+Description : VVO 190/2018 13326
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388389
+guid : notice-388389
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13327 - WYT : Modernizácia odbornıch uèební v Základnej škole Zohor
+Description : VVO 190/2018 13327
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388390
+guid : notice-388390
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13328 - DOP : Zateplenie a úprava fasády budovy školy.
+Description : VVO 190/2018 13328
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388395
+guid : notice-388395
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13329 - DOP : Energetická úspora budovy školy
+Description : VVO 190/2018 13329
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388357
+guid : notice-388357
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13330 - DOP : Oprava kultúrneho domu v obci Muráò
+Description : VVO 190/2018 13330
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388327
+guid : notice-388327
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13331 - VZT : Dodanie vakcíny na orálnu imunizáciu líšok proti besnote a jej letecké poloenie.
+Description : VVO 190/2018 13331
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388402
+guid : notice-388402
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13332 - IPP : Zateplenie strechy II. a III. sekcie objektu TÚ LF UPJŠ Košice
+Description : VVO 190/2018 13332
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388394
+guid : notice-388394
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13333 - IPP : MATERSKÁ ŠKOLA PRÍBOVCE - ZVİŠENIE KAPACITY
+Description : VVO 190/2018 13333
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388391
+guid : notice-388391
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13340 - VST : Environmentálne motorové vozidlá
+Description : VVO 190/2018 13340
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388212
+guid : notice-388212
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13342 - WYS : Odbery a rozbory povrchovıch, odpadovıch, podzemnıch a pitnıch vôd vo VO Leš a v objekte sklady garáe Zábava na roky 2019 - 2022
+Description : VVO 190/2018 13342
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388424
+guid : notice-388424
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13343 - WYS : Oprava a údrba zariadenia na zhodnocovanie odpadov
+Description : VVO 190/2018 13343
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388423
+guid : notice-388423
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13344 - IPP : „Prestavba Juhászovej kúrie“
+Description : VVO 190/2018 13344
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388421
+guid : notice-388421
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13345 - IPT : Zvıšenie technologickej úrovne spoloènosti PRAKON spol. s r.o. prostredníctvom obstarania inovatívnych technológií
+Description : VVO 190/2018 13345
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388422
+guid : notice-388422
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13346 - IPP : Zvıšenie kapacity miest MŠ v Budmericiach
+Description : VVO 190/2018 13346
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388425
+guid : notice-388425
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13347 - IPP : Spojená škola, Niná – rekonštrukcia hygienickıch zariadení
+Description : VVO 190/2018 13347
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388428
+guid : notice-388428
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13348 - VZT : Lieky ATC skupiny L03AB07
+Description : VVO 190/2018 13348
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388415
+guid : notice-388415
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13352 - DOT : Univerzálna brúska nástrojov s 5 CNC riadenımi osami
+Description : VVO 190/2018 13352
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388408
+guid : notice-388408
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13353 - IPP : HNsP Trstená- Gynekologicko- pôrodnícke oddelenie- rekonštrukcia a modernizácia
+Description : VVO 190/2018 13353
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388430
+guid : notice-388430
+pubDate : Tue, 25 Sep 2018 01:21:16 +0200
+
+
+
+Current Element :item
+Title : 13250 - IBS : Metrologické sluby
+Description : VVO 189/2018 13250
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388328
+guid : notice-388328
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13255 - WYP : Vybudovanie vodovodu v obci Michalová
+Description : VVO 189/2018 13255
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388308
+guid : notice-388308
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13256 - WYP : Rekonštrukcia zdroja tepla a stavebné úpravy Základná škola Beòuš
+Description : VVO 189/2018 13256
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388331
+guid : notice-388331
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13257 - WYP : Zníenie energetickej nároènosti budovy Kultúrneho domu v obci Hájske
+Description : VVO 189/2018 13257
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388346
+guid : notice-388346
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13258 - WYP : Zníenie energetickej nároènosti budovy Kultúrneho domu v obci Boleráz
+Description : VVO 189/2018 13258
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388347
+guid : notice-388347
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13259 - WYP : VD ¼adovo, rekonštrukcia bezpeènostného priepadu III.
+Description : VVO 189/2018 13259
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388350
+guid : notice-388350
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13260 - WYS : Vypracovanie štúdie uskutoènite¾nosti Moravskej cyklotrasy
+Description : VVO 189/2018 13260
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388307
+guid : notice-388307
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13261 - WYS : Vıkon zimnej sluby v sezóne 2018/2019
+Description : VVO 189/2018 13261
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388323
+guid : notice-388323
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13262 - WYT : Dodávka elektrickej energie
+Description : VVO 189/2018 13262
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388305
+guid : notice-388305
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13263 - WYT : Lieky a lieèivá
+Description : VVO 189/2018 13263
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388306
+guid : notice-388306
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13264 - WYT : Nákup domácich plastovıch kompostérov II.
+Description : VVO 189/2018 13264
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388337
+guid : notice-388337
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13265 - WYT : Antineoplastické èinidlá pre nemocniènú lekáreò Špecializovanej nemocnice sv. Svorada Zobor, n. o.
+Description : VVO 189/2018 13265
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388348
+guid : notice-388348
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13266 - IPP : Rekonštrukcia upného domu
+Description : VVO 189/2018 13266
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388310
+guid : notice-388310
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13267 - IPP : Rekonštrukcia cyklotrasy na cyklochodník v meste Turzovka.
+Description : VVO 189/2018 13267
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388311
+guid : notice-388311
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13268 - IPP : IBV Panské diely-Dubová ul., Orechová ul. Jaslovské Bohunice
+Description : VVO 189/2018 13268
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388312
+guid : notice-388312
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13269 - IPP : Stavebné úpravy vybranıch chodníkov v meste Levice
+Description : VVO 189/2018 13269
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388313
+guid : notice-388313
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13270 - IPP : PARKOVISKO RYBNÍKY V., LEVICE
+Description : VVO 189/2018 13270
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388314
+guid : notice-388314
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13271 - IPP : Zosuv na ceste III/3635 Detrík - Malá Domaša
+Description : VVO 189/2018 13271
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388315
+guid : notice-388315
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13272 - IPP : Opravy a rekonštrukcie komunikácií v správe mestskej èasti Bratislava-Staré Mesto
+Description : VVO 189/2018 13272
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388332
+guid : notice-388332
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13273 - IPP : Vybudovanie zariadenia opatrovate¾skej sluby Palárikova/Dobšinského
+Description : VVO 189/2018 13273
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388334
+guid : notice-388334
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13274 - IPP : Novostavba materskej školy v obci Markušovce
+Description : VVO 189/2018 13274
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388342
+guid : notice-388342
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13275 - IPP : Zvıšenie energetickej úèinnosti MŠ v Slovinkách
+Description : VVO 189/2018 13275
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388343
+guid : notice-388343
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13276 - IPP : Rekonštrukcia návštevnej infraštruktúry arboréta Kysihıbel
+Description : VVO 189/2018 13276
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388349
+guid : notice-388349
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13277 - IPT : Diverzifikácia vıroby spoloènosti ENDLESS s.r.o. o inovatívny produkt
+Description : VVO 189/2018 13277
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388309
+guid : notice-388309
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13278 - IPT : IKT vybavenie, nábytok a didaktické pomôcky pre ZŠ s MŠ  Brezovica.
+Description : VVO 189/2018 13278
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388344
+guid : notice-388344
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13289 - DOT : Mäsové vırobky a salámy
+Description : VVO 189/2018 13289
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388170
+guid : notice-388170
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13290 - DOT : Pílo-vàtacie centrum na delenie a spracovanie profilov
+Description : VVO 189/2018 13290
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388139
+guid : notice-388139
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13291 - DOT : Mäsové vırobky a salámy
+Description : VVO 189/2018 13291
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388169
+guid : notice-388169
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13295 - VST : Dodávka kompletnej linky na vırobu vıivovıch doplnkov a potravín z hroznovıch jadierok pri nízkych teplotách
+Description : VVO 189/2018 13295
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388211
+guid : notice-388211
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13296 - VST : Nákup technickıch a špeciálnych plynov
+Description : VVO 189/2018 13296
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388141
+guid : notice-388141
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
+
+Current Element :item
+Title : 13297 - DOP : Dia¾nica D1 Hrièovské Podhradie – Lietavská Lúèka
+Description : VVO 189/2018 13297
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388117
+guid : notice-388117
+pubDate : Mon, 24 Sep 2018 08:47:13 +0200
+
+
