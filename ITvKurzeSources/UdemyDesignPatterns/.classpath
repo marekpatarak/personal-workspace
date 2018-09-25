@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Lecture 12 (Singleton Responsibility)/singleresponsibility/src"/>
+	<classpathentry kind="src" path="Lecture 14 (Open Closed Principle)/OpenClosedPrinciple/src"/>
+	<classpathentry kind="src" path="Lecture 15 (Open Closed Homework)/OpenClosedPrincipleExercise/src"/>
+	<classpathentry kind="src" path="Lecture 17 (Dependency Inversion Solution)/dependencyinversion/src"/>
+	<classpathentry kind="src" path="Lecture 19 (Liskov Substitution)/LiskovSubstitution/src"/>
+	<classpathentry kind="src" path="Lecture 21 (Interface Segregation)/InterfaceSegregation/src"/>
+	<classpathentry kind="src" path="Lecture 24 Dependency Injection with Spring/dependency-injection-practice/src/main/java"/>
+	<classpathentry kind="src" path="Lecture 26 (Observer Pattern Homework Solution)/observerpattern/src"/>
+	<classpathentry kind="src" path="Lecture 28 (Coffee Shop Assignment)/solution-to-coffeeshop-problem/code/coffee-shop-solution/src"/>
+	<classpathentry kind="src" path="Lecture 29 (Builder Pattern)/builderpattern/src"/>
+	<classpathentry kind="src" path="Lecture 29 (Builder Pattern)/HW_Solution"/>
+	<classpathentry kind="src" path="Lecture 30 Factory Pattern/factorymethodpattern/src"/>
+	<classpathentry kind="src" path="Lecture 32 Singleton Pattern/singletondesignpattern/src"/>
+	<classpathentry kind="output" path="Lecture 12 (Singleton Responsibility)/singleresponsibility/bin"/>
+</classpath>

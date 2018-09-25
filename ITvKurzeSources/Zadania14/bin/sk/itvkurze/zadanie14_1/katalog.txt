@@ -1,0 +1,5 @@
+0001|Losos atlanticky|15.00|20.00
+0002|Kurecie rezne|5.00|20.00
+0003|Chlieb|1.00|10.00
+0004|Milka cokolada|1.00|20.00
+0005|Pilsner 0.5l plech|1.00|20.00

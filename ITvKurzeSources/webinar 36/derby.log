@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Feb 20 22:35:03 CET 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0161-b524-318d-000007139088 
+on database directory memory:C:\Users\Administrator\eclipse-workspace\webinar 36\itvkurze\testDB with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Loaded from file:/C:/install/jars/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_144-b01
+user.dir=C:\Users\Administrator\eclipse-workspace\webinar 36
+os.name=Windows Server 2008 R2
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
