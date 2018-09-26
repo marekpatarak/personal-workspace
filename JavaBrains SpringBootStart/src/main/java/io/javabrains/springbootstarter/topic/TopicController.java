@@ -30,7 +30,7 @@ public class TopicController {
   @RequestMapping(method = {RequestMethod.POST}, value= "/topics")
   public void createTopic(@RequestBody Topic topic) {
 
-    topicService.createTopic(topic.getId(), topic.getName(), topic.getDescription());
+    topicService.createTopic(topic);
   }
 
   @RequestMapping(method = {RequestMethod.PUT}, value= "/topics/{id}")
