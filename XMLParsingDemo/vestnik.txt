@@ -1,6 +1,501 @@
 Root element:rss
 
 Current Element :item
+Title : 13355 - WYT : Nákup kompostérov pre obec Hlinné
+Description : VVO 191/2018 13355
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388451
+guid : notice-388451
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13356 - WYT : Kompostéry pre obec Raslavice
+Description : VVO 191/2018 13356
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388452
+guid : notice-388452
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13357 - WYT : Nákup kompostérov pre mesto Stráske
+Description : VVO 191/2018 13357
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388453
+guid : notice-388453
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13358 - WYT : Nákup kompostérov pre mesto Sobrance
+Description : VVO 191/2018 13358
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388454
+guid : notice-388454
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13359 - WYT : Kompostéry pre Malokarpatské partnerstvo
+Description : VVO 191/2018 13359
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388455
+guid : notice-388455
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13360 - IPP : Rekoštrukcia ulice Kamenná, ilina
+Description : VVO 191/2018 13360
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388459
+guid : notice-388459
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13364 - IPP : Koreòová èistiareò odpadovıch vôd Èervenı Hrádok
+Description : VVO 191/2018 13364
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388437
+guid : notice-388437
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13365 - IPP : Rekonštrukcia obecnıch chodníkov, I. etapa.
+Description : VVO 191/2018 13365
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388438
+guid : notice-388438
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13366 - IPP : REKONŠTRUKCIA MATERSKEJ ŠKOLY GAZDOVSKİ RAD  V MESTE ŠAMORÍN II
+Description : VVO 191/2018 13366
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388439
+guid : notice-388439
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13367 - IPP : Cesta II/526 Látky – Kokava nad Rimavicou, sanácia zosuvu
+Description : VVO 191/2018 13367
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388441
+guid : notice-388441
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13368 - IPT : VYBAVENIE UÈEBNÍ
+Description : VVO 191/2018 13368
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388442
+guid : notice-388442
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13369 - IPT : Obstaranie záhradnıch kompostérov do obce Váhovce
+Description : VVO 191/2018 13369
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388443
+guid : notice-388443
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13370 - IPT : Dodávka záhradnıch kompostérov
+Description : VVO 191/2018 13370
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388444
+guid : notice-388444
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13371 - IPT : Obstaranie záhradnıch kompostérov do obce Trstín
+Description : VVO 191/2018 13371
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388445
+guid : notice-388445
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13372 - WYP : Rekonštrukcia  strechy  ZŠ  na  ul.  Komenského  eliezovce
+Description : VVO 191/2018 13372
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388446
+guid : notice-388446
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13373 - WYS : Vıvoj aplikaèného softvéru
+Description : VVO 191/2018 13373
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388447
+guid : notice-388447
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13374 - WYT : Laboratórne vybavenie mikrobiogického laboratória
+Description : VVO 191/2018 13374
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388448
+guid : notice-388448
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13375 - WYT : Mikroskopy pre morfológiu pôdnej mikrofauny
+Description : VVO 191/2018 13375
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388449
+guid : notice-388449
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13376 - WYS : Vıvoj aplikaèného softvéru
+Description : VVO 191/2018 13376
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388450
+guid : notice-388450
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13381 - DOP : Rekonštrukcia tepelnıch rozvodov v meste Detva - dokonèenie
+Description : VVO 191/2018 13381
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388431
+guid : notice-388431
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13382 - MSS : Poistenie zodpovednosti za škody spôsobené poistníkom/poistenım pri poskytovaní leteckıch navigaènıch sluieb
+Description : VVO 191/2018 13382
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388285
+guid : notice-388285
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13386 - VST : Ko¾ajnice
+Description : VVO 191/2018 13386
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388392
+guid : notice-388392
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13387 - VST : Konvergovaná infraštruktúra a hybridnı NAS úlonı systém
+Description : VVO 191/2018 13387
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388374
+guid : notice-388374
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13388 - VST : Managed workplace - pracovné stanice, notebooky, monitory, príslušenstvo a ich servis
+Description : VVO 191/2018 13388
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388299
+guid : notice-388299
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13389 - MRT : Síran elezitı technickı Fe2(SO4)3
+Description : VVO 191/2018 13389
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388259
+guid : notice-388259
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13390 - IPP : Stredisko triedeného zberu a kompostáreò Turzovka
+Description : VVO 191/2018 13390
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388485
+guid : notice-388485
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13391 - DOS : Zavedenie inovatívnej technológie do spoloènosti Telpon s.r.o.
+Description : VVO 191/2018 13391
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388361
+guid : notice-388361
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13392 - DOS : Zavedenie inovatívnej technológie do spoloènosti Telpon s.r.o.
+Description : VVO 191/2018 13392
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388360
+guid : notice-388360
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13393 - DOS : Zavedenie inovatívnej technológie do spoloènosti Telpon s.r.o.
+Description : VVO 191/2018 13393
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388359
+guid : notice-388359
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13394 - DOS : Monitorovanie stavebnıch objektov
+Description : VVO 191/2018 13394
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388241
+guid : notice-388241
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13398 - VNA : Nová mestská plaváreò v Ruomberku_architektonická súa návrhov
+Description : VVO 191/2018 13398
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388376
+guid : notice-388376
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13399 - VSS : Servis zariadení na spracovanie bankoviek
+Description : VVO 191/2018 13399
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388281
+guid : notice-388281
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13400 - VSS : Virtuálna privátna dátová komunikaèná sie
+Description : VVO 191/2018 13400
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388273
+guid : notice-388273
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13401 - VSS : Sanácia environmentálnej záae Bratislava – Vrakuòa - Vrakunská cesta – skládka CHZJD – SK/EZ/B2/136
+Description : VVO 191/2018 13401
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388291
+guid : notice-388291
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13402 - VSS : Pozáruènı servis angiografického systému  Artis Q Ceiling
+Description : VVO 191/2018 13402
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388242
+guid : notice-388242
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13403 - VSS : Usmeròovacie, poradenské, sprostredkovate¾ské, informaèné a osvetové sluby
+Description : VVO 191/2018 13403
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388335
+guid : notice-388335
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13404 - MSS : Sèítanie obyvate¾ov, domov a bytov 2021 - územná príprava
+Description : VVO 191/2018 13404
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388377
+guid : notice-388377
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13405 - MSS : Zabezpeèenie poskytovania stravovania formou stravnıch poukáok
+Description : VVO 191/2018 13405
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388249
+guid : notice-388249
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13406 - MSS : Odborné poradenské sluby pre potreby Úradu podpredsedu vlády SR pre investície a informatizáciu
+Description : VVO 191/2018 13406
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388297
+guid : notice-388297
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13412 - VST : Obstaranie horizontálneho baliaceho stroja
+Description : VVO 191/2018 13412
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388375
+guid : notice-388375
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13413 - VUT : Dodávka vıpoètovej techniky a príslušenstva
+Description : VVO 191/2018 13413
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388292
+guid : notice-388292
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13414 - VUT : Dodávka vıpoètovej techniky a príslušenstva
+Description : VVO 191/2018 13414
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388282
+guid : notice-388282
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13415 - VST : Multikomponentné zariadenie na vysokopresné zhotovenie jednoradovıch gu¾kovıch loísk a meranie a kontrolu ich rozhodujúcich parametrov a charakteristík
+Description : VVO 191/2018 13415
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388278
+guid : notice-388278
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13416 - VST : Automobilové farby, laky a pomocnı materiál
+Description : VVO 191/2018 13416
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388251
+guid : notice-388251
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13417 - VST : Mobilnı RTG systém a príslušenstvo
+Description : VVO 191/2018 13417
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388250
+guid : notice-388250
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13418 - VST : Inovácia vıroby v spoloènosti EKOMETAL, spol. s r.o.
+Description : VVO 191/2018 13418
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388252
+guid : notice-388252
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13419 - VST : Prekladaè materiálov
+Description : VVO 191/2018 13419
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388301
+guid : notice-388301
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13420 - VST : Komunálna technika v rámci projektu „Integrované zariadenie na nakladanie s odpadmi Detva  - Studienec, Kompostáreò“
+Description : VVO 191/2018 13420
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388243
+guid : notice-388243
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13421 - MUT : Dodávka elektriny
+Description : VVO 191/2018 13421
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388378
+guid : notice-388378
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13422 - MST : Príleitostné spoloèné obstarávanie elektrickej energie - ZMO, región JE Jaslovské Bohunice
+Description : VVO 191/2018 13422
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388324
+guid : notice-388324
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13423 - MST : Dovybavenie rekreaènıch a školiacich zariadení
+Description : VVO 191/2018 13423
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388326
+guid : notice-388326
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13424 - MST : Príleitostné spoloèné obstarávanie zemného plynu - ZMO, región JE Jaslovské Bohunice
+Description : VVO 191/2018 13424
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388325
+guid : notice-388325
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13425 - POT : Sudy a palety kovové
+Description : VVO 191/2018 13425
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388248
+guid : notice-388248
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13426 - IBP : Cesta II/526 Látky – Kokava nad Rimavicou, sanácia zosuvu
+Description : VVO 191/2018 13426
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388502
+guid : notice-388502
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
+Title : 13427 - WYP : Biskupská záhrada a kaplnky – stavebné práce
+Description : VVO 191/2018 13427
+Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388504
+guid : notice-388504
+pubDate : Wed, 26 Sep 2018 02:06:11 +0200
+
+
+
+Current Element :item
 Title : 13305 - IPS : Oprava a údrba detskıch ihrísk, športovísk a mestského mobiliáru
 Description : VVO 190/2018 13305
 Link : https://www.uvo.gov.sk/vestnik/oznamenie/detail/388400
