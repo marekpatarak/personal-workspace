@@ -1,0 +1,13 @@
+SELECT "konstanta" from table;
+SELECT stlpec1, stlpec2 from table;
+SELECT funkcia(stlpec1) from table;
+
+SELECT DISTINCT - unikatne zaznamy (cele riadky pri viac stlpcoch)
+
+WHERE - podmienka, AND OR NOT
+
+INSERT - vkladanie noveho riadku
+
+ORDER BY
+
+NULL - IS NULL, IS NOT NULL

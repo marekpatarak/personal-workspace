@@ -1,0 +1,39 @@
+git config --global user.name "Marek Patarak - setting username
+git config --global user.email gregg@codeschool.com - setting email
+git init - init local git directory
+git status - changes since last commit
+git add <filename> <filename> ... - add file to staging area
+git add --all - adds all new of modified files to staging
+git add *.txt - adds all txt in curr dir
+git add docs/*.txt - adds all txt in docs dir
+git add docs/ - adds all files in docs dir
+git add "*.txt" - adds all txt in entire project
+git commit -m "message" - create commit, -m add message to commit
+git log - history of commits
+git diff - unstaged diffs since last commit
+git diff -- staged - staged diffs since last commit
+git reset HEAD <filename> - unstage file (HEAD refers to last commit on curr branch
+git checkout --<filename> - discard changes of file to last commit (unstaged files)
+git commit -a -m "message" - add tracked files and commit
+git reset --soft HEAD^ - reset last commit into staging and move to commit before HEAD
+git commit --  -m "new message" - adds staged files to last commit and overides last commmits message
+git reset --hard HEAD^ - undo last commit and all changes
+git reset --hard HEAD^^ - undo last two commits and all changes
+git remote add origin <link> - add new remote repo named "origin"
+git remote -v - show remote repos
+git pull origin master - pull from remote repo "origin", branch "master"
+git push -u origin master - push to remote repo "origin", branch "master" (-u next time you can run only git push)
+git push -f origin master - force push, ovewrite entire remote branch with local branch
+git remote add <name> <address> - add new remote
+gir remote rm <name> - remove remote repo
+git clone <link> - clone repo into local folder
+git branch <name> - create branch 
+git checkout <name> - checkout branch
+git merge <name> - merge <name> branch in to curr branch
+git branch -d <name> - delete branch <name>
+git checkout -b <name> - creates and checkouts new branch <name>
+git stash - stash changes from working area and staging area
+git stash pop - return changes to working area
+git stash drop - delete stash
+
+.gitignore.txt - specify ignored files/folders
