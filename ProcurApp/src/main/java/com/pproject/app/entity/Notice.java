@@ -19,6 +19,17 @@ public class Notice {
 	private String pubDate;
 	
 	
+	public Notice(String title, String desc, String link, String guid, String pubDate) {
+		// TODO Auto-generated constructor stub
+		this.title = title;
+		this.description = desc;
+		this.link = link;
+		this.guid = guid;
+		this.pubDate = pubDate;
+	}
+	public Notice() {
+		// TODO Auto-generated constructor stub
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -54,6 +65,11 @@ public class Notice {
 	}
 	public void setPubDate(String pubDate) {
 		this.pubDate = pubDate;
+	}
+	@Override
+	public String toString() {
+		return "Notice [id=" + id + ", guid=" + guid + ", title=" + title + ", description=" + description + ", link="
+				+ link + ", pubDate=" + pubDate + "]";
 	}
 	
 	

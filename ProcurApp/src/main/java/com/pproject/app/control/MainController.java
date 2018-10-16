@@ -1,7 +1,10 @@
 package com.pproject.app.control;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +19,9 @@ public class MainController {
 
 	@Autowired
 	private NoticeRepository noticeRepository;
+	
+	@Autowired
+	private NoticeService noticeService;
 	
 	@GetMapping(path="/addnotice")
 	public @ResponseBody String addNewNotice (@RequestParam String guid, @RequestParam String title, @RequestParam String description, @RequestParam String link, @RequestParam String pubDate) {
@@ -32,6 +38,21 @@ public class MainController {
 	@GetMapping(path="/all")
 	public @ResponseBody Iterable<Notice> getAllNotices() {
 		return noticeRepository.findAll();
+	}
+	
+	@GetMapping(path="/allview")
+	public String getAllNoticesView(Model model) {
+		List<Notice> noticeList = (List<Notice>)noticeRepository.findAll();
+		model.addAttribute("noticeList", noticeList);
+		return "overview";
+	}
+	
+	@GetMapping(path="/feedpreview")
+	public String fetchFeedForPreview(Model model) {
+		noticeService.fetchFeedForPreview();
+		List<Notice> noticeList = (List<Notice>)noticeRepository.findAll();
+		model.addAttribute("noticeList", noticeList);
+		return "overview";
 	}
 	
 }
