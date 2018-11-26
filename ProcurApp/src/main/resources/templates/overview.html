@@ -7,7 +7,6 @@
 <body>
     <table border="1" style="width:300px">
     <tr>
-        <td>Id</td>
         <td>Guid</td>
         <td>Title</td>
         <td>Description</td>
@@ -15,7 +14,6 @@
         <td>PubDate</td>
     </tr>
     <tr th:each="noticeList : ${noticeList}">
-  		<td th:text="${noticeList.id}"></td>
   		<td th:text="${noticeList.guid}"></td>
   		<td th:text="${noticeList.title}"></td>
   		<td th:text="${noticeList.description}"></td>
