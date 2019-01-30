@@ -19,7 +19,7 @@ public class FeedFetcher {
 		try{
 			URL url = new URL(urlString);
 			URLConnection conn = url.openConnection();
-			
+					
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document doc = builder.parse(conn.getInputStream());
@@ -28,7 +28,7 @@ public class FeedFetcher {
 			return doc;
 		} catch (Exception e) 
 		{
-			logger.log(Level.SEVERE, "Couldnt fetch feed from URL");
+			logger.log(Level.SEVERE, "Couldnt fetch feed from URL" + e.getMessage());
 		}
 		
 		return null;

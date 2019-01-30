@@ -28,7 +28,7 @@ public class NoticeService {
 	public void fetchFeedForPreview() {
 		try {
 			
-			Document doc = FeedFetcher.fetchFeedFromUrl("https://a.uguu.se/G4ZTAbNW4CbH_vestnik.xml");
+			Document doc = FeedFetcher.fetchFeedFromUrl("https://www.uvo.gov.sk/rss/vestnik");
 						
 			NodeList nodeList = doc.getDocumentElement().getElementsByTagName("item");
 			

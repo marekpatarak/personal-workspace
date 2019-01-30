@@ -1,5 +1,7 @@
 package com.pproject.app.control;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +18,7 @@ import com.pproject.app.entity.Notice;
 import com.pproject.app.repository.NoticeRepository;
 
 @Controller
-@RequestMapping(path="/index")
+@RequestMapping(path="/")
 public class MainController {
 
 	@Autowired
@@ -49,13 +51,13 @@ public class MainController {
 		return "overview";
 	}
 	
-	@GetMapping(path="/feedpreview")
+	@GetMapping(path="/noticepreview")
 	public String fetchFeedForPreview(Model model) {
 		noticeService.fetchFeedForPreview();
 		List<Notice> noticeList = (List<Notice>)noticeRepository.findAll();
 		Collections.sort(noticeList);
 		model.addAttribute("noticeList", noticeList);
-		return "overview";
+		return "noticepreview";
 	}
 	
 }
