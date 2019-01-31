@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.pproject.app.entity.Notice;
 
-public interface NoticeRepository extends CrudRepository<Notice, String> {
+public interface NoticeRepository extends CrudRepository<Notice, Integer> {
 
 }

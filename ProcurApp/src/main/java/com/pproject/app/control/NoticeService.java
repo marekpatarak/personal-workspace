@@ -2,6 +2,8 @@ package com.pproject.app.control;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -22,46 +24,42 @@ public class NoticeService {
 	@Autowired
 	private NoticeRepository noticeRepository;
 
+	private static Logger logger = Logger.getLogger(NoticeService.class.getCanonicalName());
 	public void fetchFeedForPreview() {
 		try {
 			
-			File file = new File("C:\\workspace\\personal-workspace\\XMLParsingDemo\\vestnik.xml");
-			
-			DocumentBuilder dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			Document doc = dBuilder.parse(file);
-			StringBuilder strb = new StringBuilder();
-			doc.getDocumentElement().normalize();
-			
-			System.out.println("Root element:" + doc.getDocumentElement().getNodeName());
-			
+			Document doc = FeedFetcher.fetchFeedFromUrl("https://www.uvo.gov.sk/rss/vestnik");
+						
 			NodeList nodeList = doc.getDocumentElement().getElementsByTagName("item");
 			
 			for(int temp = 0; temp < nodeList.getLength(); temp++) {
 				Node nNode = nodeList.item(temp);
-				System.out.println("\nCurrent Element :" + nNode.getNodeName());
-				strb.append("\nCurrent Element :" + nNode.getNodeName());
 				
 				if(nNode.getNodeType() == Node.ELEMENT_NODE) {
-				Element eElement = (Element) nNode;
-
-				String title = eElement.getElementsByTagName("title").item(0).getTextContent();
-				String desc = eElement.getElementsByTagName("description").item(0).getTextContent();
-				String link = eElement.getElementsByTagName("link").item(0).getTextContent();
-				String guid = eElement.getElementsByTagName("guid").item(0).getTextContent();
-				String pubDate = eElement.getElementsByTagName("pubDate").item(0).getTextContent();
-				
-				Notice notice = new Notice(title, desc, link, guid, pubDate);
-				
-				noticeRepository.save(notice);
-				
-				System.out.println("Notice persisted " + notice.toString());
+					Element eElement = (Element) nNode;
+	
+					String title = eElement.getElementsByTagName("title").item(0).getTextContent();
+					String desc = eElement.getElementsByTagName("description").item(0).getTextContent();
+					String link = eElement.getElementsByTagName("link").item(0).getTextContent();
+					int guid = Integer.parseInt(eElement.getElementsByTagName("guid").item(0).getTextContent().substring(7));
+					String pubDate = eElement.getElementsByTagName("pubDate").item(0).getTextContent();
+					
+					Notice notice = new Notice(guid, title, desc, link, pubDate);
+					
+					if (!noticeRepository.existsById(guid)) {
+						noticeRepository.save(notice);
+						logger.log(Level.INFO, "Notice GUID " + guid + " persisted ");
+						
+					} else {
+						logger.log(Level.INFO, "Notice " + guid + " not persisted, duplicate GUID found");
+					}
 
 				}
 
 			}
 
 			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				logger.log(Level.SEVERE, e.getMessage());
 			}
 
 	}

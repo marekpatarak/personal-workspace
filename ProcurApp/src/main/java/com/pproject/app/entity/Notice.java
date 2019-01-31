@@ -7,19 +7,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Notice {
+public class Notice implements Comparable {
 
 	@Id
-	@GeneratedValue
-	private Integer id;
-	private String guid;
+	private int guid;
 	private String title;
 	private String description;
 	private String link;
 	private String pubDate;
 	
 	
-	public Notice(String title, String desc, String link, String guid, String pubDate) {
+	public Notice(int guid, String title, String desc, String link, String pubDate) {
 		// TODO Auto-generated constructor stub
 		this.title = title;
 		this.description = desc;
@@ -30,16 +28,11 @@ public class Notice {
 	public Notice() {
 		// TODO Auto-generated constructor stub
 	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getGuid() {
+
+	public int getGuid() {
 		return guid;
 	}
-	public void setGuid(String guid) {
+	public void setGuid(int guid) {
 		this.guid = guid;
 	}
 	public String getTitle() {
@@ -68,8 +61,18 @@ public class Notice {
 	}
 	@Override
 	public String toString() {
-		return "Notice [id=" + id + ", guid=" + guid + ", title=" + title + ", description=" + description + ", link="
+		return "Notice [guid=" + guid + ", title=" + title + ", description=" + description + ", link="
 				+ link + ", pubDate=" + pubDate + "]";
+	}
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		Notice notice = (Notice)arg0;
+		if (this.guid > notice.getGuid()) {
+			return 1;
+		} else {
+			return -1;
+		}
 	}
 	
 	
