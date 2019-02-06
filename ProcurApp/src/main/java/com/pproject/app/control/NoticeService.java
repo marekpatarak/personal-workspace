@@ -2,6 +2,9 @@ package com.pproject.app.control;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,11 +28,13 @@ public class NoticeService {
 	private NoticeRepository noticeRepository;
 
 	private static Logger logger = Logger.getLogger(NoticeService.class.getCanonicalName());
+
 	public void fetchFeedForPreview() {
 		try {
 			
-			Document doc = FeedFetcher.fetchFeedFromUrl("https://www.uvo.gov.sk/rss/vestnik");
-						
+//			Document doc = FeedFetcher.fetchFeedFromUrl("https://a.uguu.se/IGqwA1JC5Fgr_vestnik.xml");
+			Document doc = FeedFetcher.fetchFeedFromFile("C:\\library\\git\\personal\\ProcurApp\\target\\classes\\vestnik.xml");
+
 			NodeList nodeList = doc.getDocumentElement().getElementsByTagName("item");
 			
 			for(int temp = 0; temp < nodeList.getLength(); temp++) {

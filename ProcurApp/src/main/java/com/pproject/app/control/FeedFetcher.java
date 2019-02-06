@@ -1,5 +1,7 @@
 package com.pproject.app.control;
 
+import java.io.File;
+import java.io.FileReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.MalformedInputException;
@@ -7,6 +9,7 @@ import java.nio.charset.MalformedInputException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import java.util.Scanner;
 import java.util.logging.*;
 import org.w3c.dom.Document;
 
@@ -31,6 +34,31 @@ public class FeedFetcher {
 			logger.log(Level.SEVERE, "Couldnt fetch feed from URL" + e.getMessage());
 		}
 		
+		return null;
+	}
+
+	public static Document fetchFeedFromFile (String path) {
+
+		try{
+			File file = new File(path);
+			Scanner in = new Scanner(file);
+
+			StringBuilder str = new StringBuilder();
+			while(in.hasNextLine()) {
+				str.append(in.nextLine());
+			}
+
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(file);
+			doc.getDocumentElement().normalize();
+
+			return doc;
+		} catch (Exception e)
+		{
+			logger.log(Level.SEVERE, "Couldnt fetch feed from file" + e.getMessage());
+		}
+
 		return null;
 	}
 }
