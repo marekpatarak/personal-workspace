@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
@@ -32,8 +33,7 @@ public class NoticeService {
 	public void fetchFeedForPreview() {
 		try {
 			
-//			Document doc = FeedFetcher.fetchFeedFromUrl("https://a.uguu.se/IGqwA1JC5Fgr_vestnik.xml");
-			Document doc = FeedFetcher.fetchFeedFromFile("C:\\library\\git\\personal\\ProcurApp\\target\\classes\\vestnik.xml");
+			Document doc = FeedFetcher.fetchFeedFromUrl("https://www.uvo.gov.sk/rss/vestnik");
 
 			NodeList nodeList = doc.getDocumentElement().getElementsByTagName("item");
 			
@@ -52,8 +52,13 @@ public class NoticeService {
 					Notice notice = new Notice(guid, title, desc, link, pubDate);
 					
 					if (!noticeRepository.existsById(guid)) {
-						noticeRepository.save(notice);
-						logger.log(Level.INFO, "Notice GUID " + guid + " persisted ");
+						try{
+							noticeRepository.save(notice);
+							logger.log(Level.INFO, "Notice GUID " + guid + " persisted ");
+						} catch (DataException ex) {
+							logger.log(Level.WARNING, "DataException occured " + ex.getMessage());
+						}
+
 						
 					} else {
 						logger.log(Level.INFO, "Notice " + guid + " not persisted, duplicate GUID found");

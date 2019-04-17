@@ -1,17 +1,15 @@
 package com.pproject.app.control;
 
 import java.io.File;
-import java.io.FileReader;
-import java.net.URL;
-import java.net.URLConnection;
-import java.nio.charset.MalformedInputException;
+import java.net.*;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import java.util.Scanner;
 import java.util.logging.*;
-import org.w3c.dom.Document;
+
+ import org.w3c.dom.Document;
 
 public class FeedFetcher {
 	
@@ -20,12 +18,16 @@ public class FeedFetcher {
 	public static Document fetchFeedFromUrl (String urlString) {
 		
 		try{
+
+			CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
+
 			URL url = new URL(urlString);
 			URLConnection conn = url.openConnection();
-					
+
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document doc = builder.parse(conn.getInputStream());
+
 			doc.getDocumentElement().normalize();
 			
 			return doc;
