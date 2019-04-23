@@ -1,15 +1,8 @@
 package com.pproject.app.control;
 
-import java.io.File;
-import java.io.PrintWriter;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +23,7 @@ public class NoticeService {
 
 	private static Logger logger = Logger.getLogger(NoticeService.class.getCanonicalName());
 
-	public void fetchFeedForPreview() {
+	public void fetchFeedForPreview() throws Exception{
 		try {
 			
 			Document doc = FeedFetcher.fetchFeedFromUrl("https://www.uvo.gov.sk/rss/vestnik");
@@ -70,6 +63,7 @@ public class NoticeService {
 
 			} catch (Exception e) {
 				logger.log(Level.SEVERE, e.getMessage());
+				throw new Exception(e);
 			}
 
 	}
