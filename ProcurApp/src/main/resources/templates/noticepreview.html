@@ -8,6 +8,8 @@
 <body>
   <h2>Notice Overview</h2>
 	<div class="container-fluid">
+		<span><a class="btn btn-secondary btn-lg active" th:href="@{'/notices/' + ${currentPage - 1 < 1 ? 1 : currentPage - 1}}">Prevous page</a></span>
+		<span><a class="btn btn-secondary btn-lg active" th:href="@{'/notices/' + ${currentPage + 1}}">Next page</a></span>
     	<table class="table table-striped">
 	    <thead>
 	    <tr>

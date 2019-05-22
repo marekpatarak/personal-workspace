@@ -81,6 +81,7 @@ public class MainController {
 		List<Notice> noticeList = (List<Notice>)noticeRepository.findAll();
 		Collections.sort(noticeList);
 		model.addAttribute("noticeList", noticeList.subList(pageLimit*Integer.parseInt(page), pageLimit*Integer.parseInt(page)+pageLimit));
+		model.addAttribute("currentPage", Integer.parseInt(page));
 		return "noticepreview";
 	}
 
