@@ -67,12 +67,9 @@ public class MainController {
 	}
 
 	@GetMapping(path="/notices")
-	public String fetchNoticesForPreview(Model model) {
+	public String fetchNoticesForPreview() {
 
-		List<Notice> noticeList = (List<Notice>)noticeRepository.findAll();
-		Collections.sort(noticeList);
-		model.addAttribute("noticeList", noticeList);
-		return "noticepreview";
+		return "redirect:/notices/1";
 	}
 
 	@GetMapping(path="/notices/{page}")
