@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 import com.pproject.app.entity.BusinessEntity;
 import com.pproject.app.entity.NoticeType;
+import com.pproject.app.entity.PublicProcurer;
 import com.pproject.app.repository.BusinessEntityRepository;
 import com.pproject.app.repository.NoticeTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,18 @@ public class MainController {
 		n.setPubDate(pubDate);
 		noticeRepository.save(n);
 		return "Saved";
+	}
+
+	@GetMapping(path="/")
+	public String redirectLandingPage() {
+		return "redirect:/landingpage/";
+
+	}
+
+	@GetMapping(path="/landingpage")
+	public String getLandingPage() {
+
+		return "landingpage";
 	}
 	
 	@GetMapping(path="/all")
@@ -96,6 +109,13 @@ public class MainController {
 
 		model.addAttribute("businessentity", new BusinessEntity());
 		return "register";
+	}
+
+	@GetMapping("/registerprocurer")
+	public String showRegisterFormProcurer(Model model) {
+
+		model.addAttribute("publicprocurer", new PublicProcurer());
+		return "registerprocurer";
 	}
 
 	@GetMapping("/config")
