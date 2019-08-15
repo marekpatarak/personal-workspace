@@ -85,7 +85,7 @@ public class CalculatorTest {
     assertEquals(2,calc.add("//[::][;;]\n1001\n1::1"));
     assertEquals(33,calc.add("//[;;;][::]\n11;;;1002\n11::11"));
     assertEquals(444,calc.add("//[####][$$$][@@]\n111$$$111\n1003####111@@111"));
-
+    assertEquals(644,calc.add("//[####][$$$][@@][#@$%]\n111$$$111\n1003####111@@111#@$%200"));
   }
 
 }
