@@ -1,4 +1,4 @@
-package dk.cngroup.adventofcode;
+package sk.adventcode;
 
 import java.io.*;
 import java.util.ArrayList;

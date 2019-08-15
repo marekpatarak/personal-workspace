@@ -1,10 +1,9 @@
-package dk.cngroup.adventofcode;
+package sk.adventcode;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 
-public class Puzzle6 {
+public class Puzzle5 {
 
     public static void main(String[] args) {
 
@@ -14,7 +13,7 @@ public class Puzzle6 {
 
         Integer sum = 0;
 
-        ArrayList<Claim2> claims = new ArrayList<>();
+        ArrayList<Claim> claims = new ArrayList<>();
 
         try {
             // FileReader reads text files in the default encoding.
@@ -26,8 +25,7 @@ public class Puzzle6 {
                     new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) {
-                claims.add(Claim2.convertStringToClaim(line));
-                System.out.println(Claim2.convertStringToClaim(line));
+                claims.add(Claim.convertStringToClaim(line));
             }
 
             // Always close files.
@@ -44,15 +42,15 @@ public class Puzzle6 {
                             + fileName + "'");
         }
 
-        Integer[][] field = new Integer[1000][1000];
-        field = Claim2.fillClaims(claims,field);
-        System.out.println(Claim2.idOfClaim(field,claims));
+        Integer[][] field = new Integer[Claim.findMaxWaH(claims)[0]][Claim.findMaxWaH(claims)[1]];
+        field = Claim.fillClaims(claims,field);
+        System.out.println(Claim.countOfClaims(field));
     }
 
 
 }
 
-class Claim2 {
+class Claim {
     public int getFromLeft() {
         return fromLeft;
     }
@@ -85,52 +83,34 @@ class Claim2 {
         this.height = height;
     }
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-
-    public Claim2(int id, int fromLeft, int fromTop, int width, int height) {
-        this.id = id;
-        this.fromLeft = fromLeft;
-        this.fromTop = fromTop;
-        this.width = width;
-        this.height = height;
-    }
-
-    int id;
-
     int fromLeft;
     int fromTop;
     int width;
     int height;
 
+    public Claim(int fromLeft, int fromTop, int width, int height) {
+        this.fromTop = fromTop;
+        this.fromLeft = fromLeft;
+        this.width = width;
+        this.height = height;
+    }
 
     @Override
     public String toString() {
-        return "Claim2{" +
-                "id=" + id +
-                ", fromLeft=" + fromLeft +
+        return "Claim{" +
+                "fromLeft=" + fromLeft +
                 ", fromTop=" + fromTop +
                 ", width=" + width +
                 ", height=" + height +
                 '}';
     }
 
-    static Claim2 convertStringToClaim(String line) {
-        int id;
+    static Claim convertStringToClaim(String line) {
         int fromLeft;
         int fromTop;
         int width;
         int height;
-        String str = line.substring(line.indexOf("#")+1);
-        id = Integer.parseInt(str.substring(0,str.indexOf(" @")));
-        str = str.substring(str.indexOf("@")+2);
+        String str = line.substring(line.indexOf("@")+2);
         fromLeft = Integer.parseInt(str.substring(0,str.indexOf(",")));
         str = str.substring(str.indexOf(",")+1);
         fromTop = Integer.parseInt(str.substring(0,str.indexOf(":")));
@@ -139,15 +119,15 @@ class Claim2 {
         str = str.substring(str.indexOf("x")+1);
         height = Integer.parseInt(str);
 
-        return new Claim2(id,fromLeft,fromTop,width,height);
+        return new Claim(fromLeft,fromTop,width,height);
 
     }
 
-    static Integer[] findMaxWaH(ArrayList<Claim2> list) {
+    static Integer[] findMaxWaH(ArrayList<Claim> list) {
         int maxW = 0;
         int maxH = 0;
 
-        for (Claim2 claim : list) {
+        for (Claim claim : list) {
             if (claim.getFromLeft() + claim.getWidth() > maxW) {
                 maxW = claim.getFromLeft() + claim.getWidth();
             }
@@ -160,10 +140,10 @@ class Claim2 {
         return new Integer[]{maxW,maxH};
     }
 
-    static Integer[][] fillClaims(ArrayList<Claim2> claims, Integer[][] field) {
+    static Integer[][] fillClaims(ArrayList<Claim> claims, Integer[][] field) {
         Integer[][] claimField = field;
 
-        for(Claim2 claim : claims){
+        for(Claim claim : claims){
             for (int i = claim.getFromLeft(); i < claim.getFromLeft() + claim.getWidth(); i++) {
                 for (int j = claim.getFromTop(); j < claim.getFromTop() + claim.getHeight(); j++) {
                     if (claimField[i][j] == null) {
@@ -178,23 +158,17 @@ class Claim2 {
         return claimField;
     }
 
-    static Integer idOfClaim(Integer[][] field, ArrayList<Claim2> claims) {
-        Integer[][] claimField = field;
-
-        for(Claim2 claim : claims){
-            HashSet<Integer> claimFound = new HashSet<>();
-            for (int i = claim.getFromLeft(); i < claim.getFromLeft() + claim.getWidth(); i++) {
-                for (int j = claim.getFromTop(); j < claim.getFromTop() + claim.getHeight(); j++) {
-                    claimFound.add(claimField[i][j]);
+    static Integer countOfClaims(Integer[][] field) {
+        Integer count = new Integer(0);
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if(field[i][j] != null) {
+                    if (field[i][j] >= 2) {
+                        count++;
+                    }
                 }
-
             }
-            if (claimFound.size()==1 && claimFound.contains(1)) return claim.getId();
-
         }
-            return -1;
+        return count;
     }
-
 }
-
-

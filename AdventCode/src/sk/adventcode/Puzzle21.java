@@ -1,4 +1,4 @@
-package dk.cngroup.adventofcode;
+package sk.adventcode;
 
 
 public class Puzzle21 {

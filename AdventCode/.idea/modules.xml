@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/kata.iml" filepath="$PROJECT_DIR$/kata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AdventCode.iml" filepath="$PROJECT_DIR$/AdventCode.iml" />
     </modules>
   </component>
 </project>
