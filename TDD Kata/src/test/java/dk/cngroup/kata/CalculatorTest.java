@@ -2,7 +2,6 @@ package dk.cngroup.kata;
 
 import static org.junit.Assert.assertEquals;
 
-import jdk.nashorn.internal.runtime.ECMAException;
 import org.junit.Test;
 
 public class CalculatorTest {

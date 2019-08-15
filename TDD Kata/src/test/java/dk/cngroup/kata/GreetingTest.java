@@ -36,20 +36,5 @@ public class GreetingTest {
 
   }
 
-  @Test
-  public void shouldReturnSection() {
-    String name = "startseite/regional/nürnberg/ehrlichberaten";
-    String name1 = "startseite/regional";
-    String name2 = "konomrd/regional";
-    String name3 = "startseite/regional/konomrd";
-
-
-    assertEquals("regional/nürnberg", grt.parseHomeSectionName(name));
-    assertEquals("regional", grt.parseHomeSectionName(name1));
-    assertEquals("konomrd/regional", grt.parseHomeSectionName(name2));
-    assertEquals("regional/konomrd", grt.parseHomeSectionName(name3));
-
-  }
-
 
 }

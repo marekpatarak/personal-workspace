@@ -24,24 +24,4 @@ public class Greeting {
     return left + name + ".";
   }
 
-  public String parseHomeSectionName(String sectionPath) {
-
-    String parsedHomeSectionName = sectionPath;
-    String startPrefix = "startseite/";
-    String delimiter = "/";
-
-    if(sectionPath.startsWith(startPrefix)) {
-      parsedHomeSectionName = sectionPath.substring(startPrefix.length());
-
-      String[] subSections = parsedHomeSectionName.split(delimiter);
-
-      if (subSections.length==1) {
-        return subSections[0];
-      } else {
-        return subSections[0] + delimiter + subSections[1];
-      }
-    }
-    return parsedHomeSectionName;
-
-  }
 }
