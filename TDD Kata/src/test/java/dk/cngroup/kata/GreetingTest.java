@@ -15,26 +15,31 @@ public class GreetingTest {
 
   }
 
-  @Test
-  public void shouldGreetWithFriend() {
-    String name = null;
-    assertEquals("Hello, my friend.", grt.greet(name));
+    @Test
+    public void shouldGreetWithNull() {
+        assertEquals("Hello, my friend.", grt.greet(null));
 
-  }
+    }
 
-  @Test
-  public void shouldShoutWhenUppercase() {
-    String name = "JERRY";
-    assertEquals("HELLO, JERRY.", grt.greet(name));
+    @Test
+    public void shouldShoutWhenUppercase() {
+        assertEquals("HELLO, JERRY!", grt.greet("JERRY"));
 
-  }
+    }
 
-  @Test
-  public void shouldGreetTwoNames() {
-    String name = "[\"Jill\",\"Jane\"]";
-    assertEquals("Hello, Jill and Jane.", grt.greet(name));
+    @Test
+    public void shouldGreetTwoNames() {
+        assertEquals("Hello, Bob and Jane.", grt.greet("Bob","Jane"));
 
-  }
+    }
+
+    @Test
+    public void shouldGreetMoreNames() {
+        assertEquals("Hello, Bob, Jane and Midge.", grt.greet("Bob","Jane","Midge"));
+
+    }
+
+
 
 
 }

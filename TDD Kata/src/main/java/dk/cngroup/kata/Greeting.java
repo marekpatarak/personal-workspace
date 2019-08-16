@@ -5,23 +5,24 @@ import java.util.regex.Pattern;
 
 public class Greeting {
 
-  public String greet(String name) {
-    String left = "Hello, ";
-    String and = " and ";
-    String regex = "\\[(\\\"\\w{1,}\\\")\\,(\\\"\\w{1,}\\\")\\]";
-    Pattern pattern = Pattern.compile(regex);
-    Matcher matcher = name == null ? pattern.matcher("") : pattern.matcher(name);
+  public String greet(String ... name) {
+    String greeting = "Hello, ";
+    String output = name == null ? "my friend" : "";
 
-
-    if(name==null) {
-      name = "my friend";
-    } else if(name.equals(name.toUpperCase())) {
-      left = "HELLO, ";
-    } else if(matcher.lookingAt()) {
-      return left + matcher.group(1).substring(1,matcher.group(1).lastIndexOf('"')) + and + matcher.group(2).substring(1,matcher.group(2).lastIndexOf('"')) + ".";
+    if (output.isEmpty()) {
+      if (name.length == 1) {
+        output = name[0];
+      } else {
+        for(int i = 0; i < name.length - 1; i++) {
+          output += name[i];
+          if(i < name.length - 2) output += ", ";
+        }
+        output += " and " + name[name.length-1];
+      }
     }
 
-    return left + name + ".";
+
+    return output.toUpperCase().equals(output) ? (greeting + output + "!").toUpperCase() : greeting + output + ".";
   }
 
 }

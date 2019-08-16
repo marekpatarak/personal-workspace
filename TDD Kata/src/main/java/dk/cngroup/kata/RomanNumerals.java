@@ -17,7 +17,7 @@ public class RomanNumerals {
         valuesMap.put('M',1000);
     }
     public static void main(String[] args) {
-        
+
         System.out.println(convertRomanNumeral("MMCDXXXV")); //2435
         System.out.println(convertRomanNumeral("MMDXLIII")); //2543
         System.out.println(convertRomanNumeral("MMMDCCCXL")); //3840
