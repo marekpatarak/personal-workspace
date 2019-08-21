@@ -82,6 +82,50 @@ public class CalculatorBetaTest {
 
   }
 
+  @Test
+  public void shouldThrowExceptionWhenMoreNegatives() {
+    try {
+      calc.add("//:\n2\n-3:-5");
+    } catch (Exception e) {
+      assertEquals("negatives not allowed, -3,-5", e.getMessage());
+    }
+
+    try {
+      calc.add("24,35\n-10,-11");
+    } catch (Exception e) {
+      assertEquals("negatives not allowed, -10,-11", e.getMessage());
+    }
+
+
+
+  }
+
+  @Test
+  public void shouldIgnoreAbove1000() throws Exception {
+    assertEquals(10,calc.add("//:\n2\n3:5:1001"));
+    assertEquals(80,calc.add("//;\n24;35\n10;11;1002"));
+    assertEquals(359,calc.add("//>\n245>111>1\n1>1>2003"));
+    assertEquals(456,calc.add("//&\n245\n111\n10\n20\n30\n40\n3000"));
+    assertEquals(0,    calc.add("10000"));
+
+  }
+
+  @Test
+  public void shouldAllowDelimitersOfAnyLength() throws Exception {
+    assertEquals(10,calc.add("//::\n2\n3::5::1001"));
+    assertEquals(80,calc.add("//;;;\n24;;;35\n10;;;11;;;1002"));
+    assertEquals(359,calc.add("//>><<\n245>><<111>><<1\n1>><<1>><<2003"));
+    assertEquals(456,calc.add("//&@#$&\n245\n111\n10\n20\n30\n40\n3000"));
+
+  }
+
+  @Test
+  public void shouldAllowMoreDelimiters() throws Exception {
+    assertEquals(10,calc.add("//[:][;]\n2\n3:5;1001"));
+    assertEquals(80,calc.add("//[?][#][$]\n24?35\n10#11$1002"));
+
+  }
+
 
 
 }

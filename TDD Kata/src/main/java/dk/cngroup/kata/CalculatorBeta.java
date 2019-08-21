@@ -16,8 +16,19 @@ public class CalculatorBeta {
 
             return calculateSum(input,",");
         } else {
-            char delim = input.charAt(2);
-            return calculateSum(input.substring(4), input.substring(2,3));
+            if (!input.startsWith("//[")) {
+                int indexOfNL = input.indexOf("\n");
+                String delim = input.substring(2, indexOfNL);
+
+                return calculateSum(input.substring(indexOfNL + 1), delim);
+            } else {
+
+            }
+
+            int indexOfNL = input.indexOf("\n");
+            String delim = input.substring(2, indexOfNL);
+
+            return calculateSum(input.substring(indexOfNL + 1), delim);
         }
     }
 
@@ -36,14 +47,25 @@ public class CalculatorBeta {
 
                 int[] pole = arr.stream().mapToInt(x -> Integer.parseInt(x)).filter(x -> x < 0).toArray();
                 if (pole.length > 0) {
-                    throw new Exception("negatives not allowed, " + String.valueOf(pole[0]));
+                    StringBuilder strb = new StringBuilder();
+                    for(Integer i : pole) {
+                        strb.append(i + ",");
+                    }
+                    strb.deleteCharAt(strb.length()-1);
+
+                    throw new Exception("negatives not allowed, " + strb.toString());
                 } else {
-                    return arr.stream().mapToInt(x -> Integer.parseInt(x)).sum();
+                    return arr.stream().mapToInt(x -> Integer.parseInt(x)).filter(x-> x < 1000).sum();
                 }
 
             } else {
                 if(Integer.parseInt(input) > 0) {
-                    return Integer.parseInt(input);
+                    if (Integer.parseInt(input) > 1000) {
+                        return 0;
+                    } else {
+                        return Integer.parseInt(input);
+
+                    }
                 } else {
                     throw new Exception("negatives not allowed, " + input);
                 }
