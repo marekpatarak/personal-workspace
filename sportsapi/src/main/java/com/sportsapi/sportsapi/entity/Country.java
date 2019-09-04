@@ -1,21 +1,27 @@
 package com.sportsapi.sportsapi.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.json.JSONObject;
 
-@Entity
+import javax.annotation.Generated;
+import javax.persistence.*;
+import java.util.List;
+
+@Entity(name="country")
 public class Country {
 
     @Id
-    public int id;
+    @GeneratedValue
+    private Integer id;
 
-    public String name;
-    public String code;
-    public String flag;
+    private String country;
+    private String code;
+    private String flag;
 
-    public Country(int id, String name, String code, String flag) {
-        this.id = id;
-        this.name = name;
+    @OneToMany(mappedBy = "country")
+    private List<League> leagues;
+
+    public Country(String country, String code, String flag) {
+        this.country = country;
         this.code = code;
         this.flag = flag;
     }
@@ -24,7 +30,7 @@ public class Country {
 
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -32,12 +38,12 @@ public class Country {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCountry() {
+        return country;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getCode() {
@@ -56,14 +62,33 @@ public class Country {
         this.flag = flag;
     }
 
+    public List<League> getLeagues() {
+        return leagues;
+    }
+
+    public void setLeagues(List<League> leagues) {
+        this.leagues = leagues;
+    }
+
     @Override
     public String toString() {
         return "Country{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
                 ", code='" + code + '\'' +
                 ", flag='" + flag + '\'' +
                 '}';
+    }
+
+    public static Country getCountryFromJsonObject(JSONObject jsonObject) {
+        if(jsonObject != null) {
+            String country = !jsonObject.get("country").equals(null) ? (String)jsonObject.get("country") : null;
+            String code = !jsonObject.get("code").equals(null) ? (String)jsonObject.get("code") : null;
+            String flag = !jsonObject.get("flag").equals(null) ? (String)jsonObject.get("flag") : null;
+
+            return new Country(country,code,flag);
+        }
+        return null;
     }
 }
 
