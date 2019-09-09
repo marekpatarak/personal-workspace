@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Leagues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
+</head>
+<body>
+<header th:insert="../fragments/header.html"></header>
+  <h2>Leagues</h2>
+	<div class="container-fluid">
+    	<table class="table table-striped">
+	    <thead>
+	    <tr>
+			<th>Logo</th>
+	        <th>Name</th>
+	        <th>Season</th>
+			<th>Season Start</th>
+			<th>Season End</th>
+			<th>Country</th>
+		</tr>
+	    </thead>
+	    <tbody>
+	    <tr th:each="leagues : ${leagues}">
+			<td><img style="width: 50px" th:src="${leagues.logo}"></img></td>
+	  		<td th:text="${leagues.name}"></td>
+			<td th:text="${leagues.season}"></td>
+			<td th:text="${leagues.season_start}"></td>
+			<td th:text="${leagues.season_end}"></td>
+			<td><img style="width: 50px" th:src="${leagues.getCountry().getFlag()}"></img></td>
+		</tr>
+	    </tbody>
+	</table>
+</div>
+</body>
+</html>

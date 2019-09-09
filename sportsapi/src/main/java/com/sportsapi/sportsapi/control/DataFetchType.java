@@ -4,7 +4,8 @@ public enum DataFetchType {
 
     COUNTRIES("countries",""),
     LEAGUES("leagues",""),
-    TEAMS("teams","/league/");
+    TEAMS("teams","/league/"),
+    TEAMSTATISTICS("statistics","");
 
 
     private String fetchType;

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Teams</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
+</head>
+<body>
+<header th:insert="../fragments/header.html"></header>
+  <h2>Teams</h2>
+	<div class="container-fluid">
+    	<table class="table table-striped">
+	    <thead>
+	    <tr>
+			<th>Logo</th>
+			<th>Name</th>
+			<th>Founded</th>
+			<th>Venue</th>
+			<th>Venue Capacity</th>
+			<th>League</th>
+			<th>Country</th>
+		</tr>
+	    </thead>
+	    <tbody>
+	    <tr th:each="team : ${teams}">
+			<td><img style="width: 50px" th:src="${team.logo}"></img></td>
+			<td th:text="${team.name}"></td>
+			<td th:text="${team.founded}"></td>
+			<td><a th:href="${'https://www.google.com/maps/search/' + team.venue_name +','+ team.venue_city}" th:text="${team.venue_name + ', ' + team.venue_city}"/></td>
+			<td th:text="${team.venue_capacity}"></td>
+			<td><img style="width: 50px" th:src="${team.getLeague().getLogo()}"></img></td>
+			<td><img style="width: 50px" th:src="${team.getLeague().getCountry().getFlag()}"></img></td>
+	    </tr>
+	    </tbody>
+	</table>
+</div>
+</body>
+</html>

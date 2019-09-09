@@ -3,8 +3,10 @@ package com.sportsapi.sportsapi.control;
 import com.sportsapi.sportsapi.entity.Country;
 import com.sportsapi.sportsapi.entity.League;
 import com.sportsapi.sportsapi.entity.Team;
+import com.sportsapi.sportsapi.entity.TeamStatistics;
 import com.sportsapi.sportsapi.repository.CountryRepository;
 import com.sportsapi.sportsapi.repository.LeagueRepository;
+import com.sportsapi.sportsapi.repository.TeamStatisticsRepository;
 import com.sportsapi.sportsapi.repository.TeamsRepository;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -32,51 +34,79 @@ public class MainService {
     @Autowired
     private TeamsRepository teamsRepository;
 
+    @Autowired
+    private TeamStatisticsRepository teamStatisticsRepository;
+
     private static Logger logger = Logger.getLogger(MainService.class.getCanonicalName());
+
+    public List<Country> getCountries() {
+
+        return (List<Country>)countryRepository.findAll();
+    }
+
+    public List<League> getLeagues() {
+
+        return (List<League>)leagueRepository.findAll();
+    }
+
+    public List<Team> getTeams() {
+
+        return (List<Team>)teamsRepository.findAll();
+    }
 
     public void fetchData(DataFetchType dataFetchType, String param) {
 
         JSONObject jsonObject = prepareJSONObject(dataFetchType, param);
-        JSONArray jsonArray = jsonObject.getJSONObject("api").getJSONArray(dataFetchType.getFetchType());
+        if (dataFetchType == DataFetchType.TEAMSTATISTICS) {
+            JSONObject statisticsObject = jsonObject.getJSONObject("api").getJSONObject(dataFetchType.getFetchType());
+            TeamStatistics teamStatistics = TeamStatistics.getTeamStatisticsFromJsonObject(statisticsObject);
+            Team team = teamsRepository.findById(Integer.parseInt(param)).get();
+            team.setTeam_statistics(teamStatistics);
+            teamStatisticsRepository.save(teamStatistics);
+            teamsRepository.save(team);
+        } else {
+            JSONArray jsonArray = jsonObject.getJSONObject("api").getJSONArray(dataFetchType.getFetchType());
 
-        for (Object arrayObject : jsonArray) {
-            JSONObject entityObject = (JSONObject)arrayObject;
+            for (Object arrayObject : jsonArray) {
+                JSONObject entityObject = (JSONObject) arrayObject;
 
-            switch(dataFetchType) {
+                switch (dataFetchType) {
 
-                case COUNTRIES:
-                    Country country = Country.getCountryFromJsonObject(entityObject);
-                    countryRepository.save(country);
-                    logger.log(Level.INFO,"Country " + country.getCountry() + " saved");
-                    break;
+                    case COUNTRIES:
+                        Country country = Country.getCountryFromJsonObject(entityObject);
+                        countryRepository.save(country);
+                        logger.log(Level.INFO, "Country " + country.getCountry() + " saved");
+                        break;
 
-                case LEAGUES:
-                    League league = League.getLeagueFromJsonObject(entityObject);
-                    Country leagueCountry = countryRepository.findCountryByCountryEquals(league.getCountry().getCountry());
+                    case LEAGUES:
+                        League league = League.getLeagueFromJsonObject(entityObject);
+                        Country leagueCountry = countryRepository.findCountryByCountryEquals(league.getCountry().getCountry());
 
-                    if (leagueCountry != null) {
-                        league.setCountry(leagueCountry);
-                    } else {
-                        countryRepository.save(league.getCountry());
-                    }
+                        if (leagueCountry != null) {
+                            league.setCountry(leagueCountry);
+                        } else {
+                            countryRepository.save(league.getCountry());
+                        }
 
-                    leagueRepository.save(league);
-                    logger.log(Level.INFO,league.toString() + " saved");
-                    break;
+                        leagueRepository.save(league);
+                        logger.log(Level.INFO, league.toString() + " saved");
+                        break;
 
-                case TEAMS:
-                    League teamLeague = leagueRepository.findById(Integer.parseInt(param)).get();
-                    Team team = Team.getTeamFromJsonObject(entityObject);
+                    case TEAMS:
+                        League teamLeague = leagueRepository.findById(Integer.parseInt(param)).get();
+                        Team team = Team.getTeamFromJsonObject(entityObject);
 
-                    if (teamLeague != null) {
-                        team.setLeague(teamLeague);
-                    }
+                        if (teamLeague != null) {
+                            team.setLeague(teamLeague);
+                        }
 
-                    teamsRepository.save(team);
-                    logger.log(Level.INFO,team.toString() + " saved");
+                        teamsRepository.save(team);
+                        logger.log(Level.INFO, team.toString() + " saved");
 
-                    break;
-            }
+                        break;
+
+                }
+        }
 
         }
 
@@ -86,7 +116,14 @@ public class MainService {
 
 
     private JSONObject prepareJSONObject (DataFetchType dataFetchType, String param) {
-        String url = Configuration.properties.get(Configuration.RAPID_API_URL_PREFIX) + dataFetchType.getFetchType() + dataFetchType.getUrlSuffix() + param;
+        String url;
+        if (dataFetchType == DataFetchType.TEAMSTATISTICS) {
+            Team team = teamsRepository.findById(Integer.parseInt(param)).get();
+            Integer leagueId = team.getLeague().getLeague_id();
+             url = Configuration.properties.get(Configuration.RAPID_API_URL_PREFIX) + dataFetchType.getFetchType() + "/" + leagueId + "/" + param;
+        } else {
+             url = Configuration.properties.get(Configuration.RAPID_API_URL_PREFIX) + dataFetchType.getFetchType() + dataFetchType.getUrlSuffix() + param;
+        }
 
         StringBuilder strb = new StringBuilder();
 

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Countries</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
+</head>
+<body>
+<header th:insert="../fragments/header.html"></header>
+  <h2>Countries</h2>
+	<div class="container-fluid">
+    	<table class="table table-striped">
+	    <thead>
+	    <tr>
+			<th>Flag</th>
+	        <th>Code</th>
+	        <th>Country</th>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <tr th:each="countries : ${countries}">
+			<td><img style="width: 50px" th:src="${countries.flag}"></img></td>
+	  		<td th:text="${countries.code}"></td>
+			<td th:text="${countries.country}"></td>
+	    </tr>
+	    </tbody>
+	</table>
+</div>
+</body>
+</html>

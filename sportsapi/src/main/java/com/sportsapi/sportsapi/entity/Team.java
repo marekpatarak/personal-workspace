@@ -2,10 +2,7 @@ package com.sportsapi.sportsapi.entity;
 
 import org.json.JSONObject;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity(name="team")
 public class Team {
@@ -23,6 +20,9 @@ public class Team {
     private String venue_address;
     private String venue_city;
     private Integer venue_capacity;
+    @OneToOne
+    @JoinColumn(name="teamstatistics_id")
+    private TeamStatistics team_statistics;
 
     public Team() {
     }
@@ -105,6 +105,14 @@ public class Team {
 
     public void setVenue_capacity(Integer venue_capacity) {
         this.venue_capacity = venue_capacity;
+    }
+
+    public TeamStatistics getTeam_statistics() {
+        return team_statistics;
+    }
+
+    public void setTeam_statistics(TeamStatistics team_statistics) {
+        this.team_statistics = team_statistics;
     }
 
     @Override
