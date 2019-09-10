@@ -11,7 +11,7 @@
 	<groupId>com.sportsapi</groupId>
 	<artifactId>sportsapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<country>sportsapi</country>
+	<countryName>sportsapi</countryName>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

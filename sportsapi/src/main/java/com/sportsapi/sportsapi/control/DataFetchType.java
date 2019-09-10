@@ -3,9 +3,10 @@ package com.sportsapi.sportsapi.control;
 public enum DataFetchType {
 
     COUNTRIES("countries",""),
-    LEAGUES("leagues",""),
+    LEAGUES("leagues","/league/"),
     TEAMS("teams","/league/"),
-    TEAMSTATISTICS("statistics","");
+    TEAMSTATISTICS("statistics","/"),
+    PLAYERS("players","/squad/");
 
 
     private String fetchType;

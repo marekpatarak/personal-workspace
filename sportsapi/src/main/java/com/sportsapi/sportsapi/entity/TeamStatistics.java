@@ -23,8 +23,8 @@ public class TeamStatistics {
     private Integer goalsForAway;
     private Integer goalsAgainstHome;
     private Integer goalsAgainstAway;
-    @OneToOne (mappedBy = "team_statistics")
-    private Team team;
+//    @OneToOne (mappedBy = "team_statistics")
+//    private Team team;
 
 
     public Integer getId() {
@@ -115,13 +115,13 @@ public class TeamStatistics {
         this.goalsAgainstAway = goalsAgainstAway;
     }
 
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
+//    public Team getTeam() {
+//        return team;
+//    }
+//
+//    public void setTeam(Team team) {
+//        this.team = team;
+//    }
 
     @Override
     public String toString() {
@@ -137,7 +137,7 @@ public class TeamStatistics {
                 ", goalsForAway=" + goalsForAway +
                 ", goalsAgainstHome=" + goalsAgainstHome +
                 ", goalsAgainstAway=" + goalsAgainstAway +
-                ", team=" + team.getTeam_id() +
+//                ", team=" + team.getTeamId() +
                 '}';
     }
 

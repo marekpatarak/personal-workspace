@@ -8,42 +8,36 @@ import java.util.List;
 @Entity(name="league")
 public class League {
 
-    @Id
-    private Integer league_id;
-    private String name;
+    // Premier league id = 524
+    // Primera division id = 775
+    // Serie A id = 891
+    // Bundesliga id = 754
+    // Ligue 1 id = 525
 
+    @Id
+    private Integer leagueId;
+    private String name;
     @ManyToOne
     @JoinColumn(name="country_id")
     private Country country;
     private Integer season;
-    private String season_start;
-    private String season_end;
+    private String seasonStart;
+    private String seasonEnd;
     private String logo;
     private Boolean standings;
-    private Boolean is_current;
+    private Boolean isCurrent;
     @OneToMany(mappedBy = "league")
     private List<Team> teams;
-
-    public League(Integer league_id, String name, Integer season, String season_start, String season_end, String logo, Boolean standings, Boolean is_current) {
-        this.league_id = league_id;
-        this.name = name;
-        this.season = season;
-        this.season_start = season_start;
-        this.season_end = season_end;
-        this.logo = logo;
-        this.standings = standings;
-        this.is_current = is_current;
-    }
 
     public League() {
 
     }
-    public Integer getLeague_id() {
-        return league_id;
+    public Integer getLeagueId() {
+        return leagueId;
     }
 
-    public void setLeague_id(Integer league_id) {
-        this.league_id = league_id;
+    public void setLeagueId(Integer leagueId) {
+        this.leagueId = leagueId;
     }
 
     public String getName() {
@@ -70,20 +64,20 @@ public class League {
         this.season = season;
     }
 
-    public String getSeason_start() {
-        return season_start;
+    public String getSeasonStart() {
+        return seasonStart;
     }
 
-    public void setSeason_start(String season_start) {
-        this.season_start = season_start;
+    public void setSeasonStart(String seasonStart) {
+        this.seasonStart = seasonStart;
     }
 
-    public String getSeason_end() {
-        return season_end;
+    public String getSeasonEnd() {
+        return seasonEnd;
     }
 
-    public void setSeason_end(String season_end) {
-        this.season_end = season_end;
+    public void setSeasonEnd(String seasonEnd) {
+        this.seasonEnd = seasonEnd;
     }
 
     public String getLogo() {
@@ -102,12 +96,12 @@ public class League {
         this.standings = standings;
     }
 
-    public Boolean getIs_current() {
-        return is_current;
+    public Boolean getIsCurrent() {
+        return isCurrent;
     }
 
-    public void setIs_current(Boolean is_current) {
-        this.is_current = is_current;
+    public void setIsCurrent(Boolean isCurrent) {
+        this.isCurrent = isCurrent;
     }
 
     public List<Team> getTeams() {
@@ -121,34 +115,33 @@ public class League {
     @Override
     public String toString() {
         return "League{" +
-                "league_id=" + league_id +
+                "leagueId=" + leagueId +
                 ", name='" + name + '\'' +
-                ", country=" + country.getCountry() +
+                ", country=" + country.getCountryName() +
                 ", season=" + season +
-                ", season_start='" + season_start + '\'' +
-                ", season_end='" + season_end + '\'' +
+                ", seasonStart='" + seasonStart + '\'' +
+                ", seasonEnd='" + seasonEnd + '\'' +
                 ", logo='" + logo + '\'' +
                 ", standings=" + standings +
-                ", is_current=" + is_current +
+                ", isCurrent=" + isCurrent +
                 '}';
     }
 
     public static League getLeagueFromJsonObject(JSONObject jsonObject) {
         if(jsonObject != null) {
-            Integer leagueId = !jsonObject.get("league_id").equals(null) ? (Integer)jsonObject.get("league_id") : null;
-            String name = !jsonObject.get("name").equals(null) ? (String)jsonObject.get("name") : null;
-            Integer season = !jsonObject.get("season").equals(null) ? (Integer)jsonObject.get("season") : null;
-            String seasonStart = !jsonObject.get("season_start").equals(null) ? (String)jsonObject.get("season_start") : null;
-            String seasonEnd = !jsonObject.get("season_end").equals(null) ? (String)jsonObject.get("season_end") : null;
-            String logo = !jsonObject.get("logo").equals(null) ? (String)jsonObject.get("logo") : null;
-            Boolean standings = (Integer) jsonObject.get("standings") == 1 ? true : false;
-            Boolean isCurrent = (Integer) jsonObject.get("is_current") == 1 ? true : false;
+            Country country = new Country();
+            country.setCountryName(!jsonObject.get("country").equals(null) ? (String)jsonObject.get("country") : null);
+            country.setCode(!jsonObject.get("country_code").equals(null) ? (String)jsonObject.get("country_code") : null);
 
-            String countryName = !jsonObject.get("country").equals(null) ? (String)jsonObject.get("country") : null;
-            String countryCode = !jsonObject.get("country_code").equals(null) ? (String)jsonObject.get("country_code") : null;
-
-            Country country = new Country(countryName,countryCode,null);
-            League league = new League(leagueId,name,season,seasonStart,seasonEnd,logo,standings,isCurrent);
+            League league = new League();
+            league.setLeagueId(!jsonObject.get("league_id").equals(null) ? (Integer)jsonObject.get("league_id") : null);
+            league.setName(jsonObject.get("name").equals(null) ? (String)jsonObject.get("name") : null);
+            league.setSeason(!jsonObject.get("season").equals(null) ? (Integer)jsonObject.get("season") : null);
+            league.setSeasonStart(!jsonObject.get("season_start").equals(null) ? (String)jsonObject.get("season_start") : null);
+            league.setSeasonEnd(!jsonObject.get("season_end").equals(null) ? (String)jsonObject.get("season_end") : null);
+            league.setLogo(!jsonObject.get("logo").equals(null) ? (String)jsonObject.get("logo") : null);
+            league.setStandings((Integer) jsonObject.get("standings") == 1 ? true : false);
+            league.setIsCurrent((Integer) jsonObject.get("is_current") == 1 ? true : false);
             league.setCountry(country);
 
             return league;

@@ -21,7 +21,7 @@
 	    <tr th:each="countries : ${countries}">
 			<td><img style="width: 50px" th:src="${countries.flag}"></img></td>
 	  		<td th:text="${countries.code}"></td>
-			<td th:text="${countries.country}"></td>
+			<td th:text="${countries.countryName}"></td>
 	    </tr>
 	    </tbody>
 	</table>

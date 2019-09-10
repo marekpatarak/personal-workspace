@@ -26,8 +26,8 @@
 			<td><img style="width: 50px" th:src="${team.logo}"></img></td>
 			<td th:text="${team.name}"></td>
 			<td th:text="${team.founded}"></td>
-			<td><a th:href="${'https://www.google.com/maps/search/' + team.venue_name +','+ team.venue_city}" th:text="${team.venue_name + ', ' + team.venue_city}"/></td>
-			<td th:text="${team.venue_capacity}"></td>
+			<td><a th:href="${'https://www.google.com/maps/search/' + team.venueName +','+ team.venueCity}" th:text="${team.venueName + ', ' + team.venueCity}"/></td>
+			<td th:text="${team.venueCapacity}"></td>
 			<td><img style="width: 50px" th:src="${team.getLeague().getLogo()}"></img></td>
 			<td><img style="width: 50px" th:src="${team.getLeague().getCountry().getFlag()}"></img></td>
 	    </tr>
