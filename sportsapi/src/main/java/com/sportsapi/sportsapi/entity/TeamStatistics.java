@@ -2,10 +2,7 @@ package com.sportsapi.sportsapi.entity;
 
 import org.json.JSONObject;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity(name="teamstatistics")
 public class TeamStatistics {
@@ -23,8 +20,9 @@ public class TeamStatistics {
     private Integer goalsForAway;
     private Integer goalsAgainstHome;
     private Integer goalsAgainstAway;
-//    @OneToOne (mappedBy = "team_statistics")
-//    private Team team;
+    @OneToOne
+    @JoinColumn(name="team_id")
+    private Team team;
 
 
     public Integer getId() {
@@ -115,13 +113,22 @@ public class TeamStatistics {
         this.goalsAgainstAway = goalsAgainstAway;
     }
 
-//    public Team getTeam() {
-//        return team;
-//    }
-//
-//    public void setTeam(Team team) {
-//        this.team = team;
-//    }
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
+    public Integer getPoints() {
+        Integer points = 0;
+        if(getWinsAway() != null && getWinsHome() != null && getDrawsAway() != null && getDrawsHome() != null) {
+            points += (winsAway + winsHome) * 3;
+            points += (drawsAway + drawsHome) * 1;
+        }
+        return points;
+    }
 
     @Override
     public String toString() {
@@ -137,7 +144,7 @@ public class TeamStatistics {
                 ", goalsForAway=" + goalsForAway +
                 ", goalsAgainstHome=" + goalsAgainstHome +
                 ", goalsAgainstAway=" + goalsAgainstAway +
-//                ", team=" + team.getTeamId() +
+                ", team=" + team.getTeamId() +
                 '}';
     }
 

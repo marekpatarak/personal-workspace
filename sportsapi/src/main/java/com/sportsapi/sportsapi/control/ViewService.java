@@ -78,5 +78,13 @@ public class ViewService {
         return countryMap;
 
     }
+
+    public List<Team> getTeamsByLeague(String leagueId) {
+        return teamsRepository.findTeamsByLeague_LeagueId(Integer.parseInt(leagueId));
+    }
+
+    public List<Player> getPlayersByTeam(String teamId) {
+        return playersRepository.findPlayersByTeam_TeamId(Integer.parseInt(teamId));
+    }
 }
 

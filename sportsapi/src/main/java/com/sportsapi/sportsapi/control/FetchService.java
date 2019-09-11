@@ -1,9 +1,6 @@
 package com.sportsapi.sportsapi.control;
 
-import com.sportsapi.sportsapi.entity.Country;
-import com.sportsapi.sportsapi.entity.League;
-import com.sportsapi.sportsapi.entity.Player;
-import com.sportsapi.sportsapi.entity.Team;
+import com.sportsapi.sportsapi.entity.*;
 import com.sportsapi.sportsapi.repository.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -45,64 +42,69 @@ public class FetchService {
 
         JSONObject jsonObject = fetchJSONObject(dataFetchType, param);
 
-        JSONArray jsonArray = jsonObject.getJSONObject("api").getJSONArray(dataFetchType.getFetchType());
+        if(dataFetchType != DataFetchType.TEAMSTATISTICS) {
 
-        for (Object arrayObject : jsonArray) {
-            JSONObject entityObject = (JSONObject) arrayObject;
+            JSONArray jsonArray = jsonObject.getJSONObject("api").getJSONArray(dataFetchType.getFetchType());
 
-            switch (dataFetchType) {
+            for (Object arrayObject : jsonArray) {
+                JSONObject entityObject = (JSONObject) arrayObject;
 
-                case COUNTRIES:
-                    Country country = Country.getCountryFromJsonObject(entityObject);
-                    countryRepository.save(country);
-                    logger.log(Level.INFO, "Country " + country.getCountryName() + " saved");
-                    break;
+                switch (dataFetchType) {
 
-                case LEAGUES:
-                    League league = League.getLeagueFromJsonObject(entityObject);
-                    Country leagueCountry = countryRepository.findCountryByCountryNameEquals(league.getCountry().getCountryName());
+                    case COUNTRIES:
+                        Country country = Country.getCountryFromJsonObject(entityObject);
+                        countryRepository.save(country);
+                        logger.log(Level.INFO, "Country " + country.getCountryName() + " saved");
+                        break;
 
-                    if (leagueCountry != null) {
-                        league.setCountry(leagueCountry);
-                    } else {
-                        countryRepository.save(league.getCountry());
-                    }
+                    case LEAGUES:
+                        League league = League.getLeagueFromJsonObject(entityObject);
+                        Country leagueCountry = countryRepository.findCountryByCountryNameEquals(league.getCountry().getCountryName());
 
-                    leagueRepository.save(league);
-                    logger.log(Level.INFO, league.toString() + " saved");
-                    break;
+                        if (leagueCountry != null) {
+                            league.setCountry(leagueCountry);
+                        } else {
+                            countryRepository.save(league.getCountry());
+                        }
 
-                case TEAMS:
-                    Team team = Team.getTeamFromJsonObject(entityObject);
-                    League teamLeague = leagueRepository.findById(Integer.parseInt(param)).get();
+                        leagueRepository.save(league);
+                        logger.log(Level.INFO, league.toString() + " saved");
+                        break;
 
-                    if (teamLeague != null) {
-                        team.setLeague(teamLeague);
-                    } else {
-                        leagueRepository.save(teamLeague);
-                    }
+                    case TEAMS:
+                        Team team = Team.getTeamFromJsonObject(entityObject);
+                        League teamLeague = leagueRepository.findById(Integer.parseInt(param)).get();
 
-                    teamsRepository.save(team);
-                    logger.log(Level.INFO, team.toString() + " saved");
+                        if (teamLeague != null) {
+                            team.setLeague(teamLeague);
+                        } else {
+                            leagueRepository.save(teamLeague);
+                        }
 
-                    break;
+                        teamsRepository.save(team);
+                        logger.log(Level.INFO, team.toString() + " saved");
 
-                case PLAYERS:
-                    Team playerTeam = teamsRepository.findById(Integer.parseInt(param)).get();
-                    Player player = Player.getPlayerFromJsonObject(entityObject);
+                        break;
 
-                    if (playerTeam != null) {
-                        player.setTeam(playerTeam);
-                    }
+                    case PLAYERS:
+                        Team playerTeam = teamsRepository.findById(Integer.parseInt(param)).get();
+                        Player player = Player.getPlayerFromJsonObject(entityObject);
 
-                    playerRepository.save(player);
-                    break;
+                        if (playerTeam != null) {
+                            player.setTeam(playerTeam);
+                        }
 
-                case TEAMSTATISTICS:
-                    break;
+                        playerRepository.save(player);
+                        break;
+
+                }
 
             }
-
+        } else {
+            TeamStatistics teamStatistics = TeamStatistics.getTeamStatisticsFromJsonObject(jsonObject.getJSONObject("api").getJSONObject(dataFetchType.getFetchType()));
+            Team team = teamsRepository.findById(Integer.parseInt(param)).get();
+            teamStatistics.setTeam(team);
+            teamStatisticsRepository.save(teamStatistics);
         }
 
         logger.log(Level.INFO,"Fetch of data *" + dataFetchType.getFetchType() + "* finished");
@@ -124,13 +126,9 @@ public class FetchService {
                 url += dataFetchType.getUrlSuffix() + param + "/" + config.getProperty(Config.SEASON_2019);
                 break;
             case TEAMSTATISTICS:
-                Team team = teamsRepository.findById(Integer.parseInt(param)).get();
-                if (team != null) {
-                    Integer leagueId = team.getLeague().getLeagueId();
-                    url += dataFetchType.getUrlSuffix() + leagueId + "/" + param;
-                } else {
-                    return null;
-                }
+                Integer leagueId = teamsRepository.findById(Integer.parseInt(param)).get().getLeague().getLeagueId();
+                url += dataFetchType.getUrlSuffix() + leagueId + "/" + param;
+                break;
 
         }
 

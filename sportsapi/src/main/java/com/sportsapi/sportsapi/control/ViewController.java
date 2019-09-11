@@ -11,8 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -32,18 +34,12 @@ public class ViewController {
     @Autowired
     LeagueRepository leagueRepository;
 
-    @GetMapping(path="/test")
-    public String test() {
 
-        Team team = (Team)teamsRepository.findById(33).get();
-        League leagues1 = (League)leagueRepository.findById(524).get();
-        League leagues2 = (League)leagueRepository.findById(524).get();
+    @GetMapping(path="/")
+    public String getLandingPage() {
 
-        String sa = null;
-
-        return "success";
+        return "landingpage";
     }
-
 
     @GetMapping(path="/countries")
     public String getCountries(Model model) {
@@ -71,10 +67,41 @@ public class ViewController {
         return "teams";
     }
 
+    @GetMapping(path="/teams/{leagueId}")
+    public String getTeamsByLeague(@PathVariable("leagueId") String leagueId, Model model) {
+
+        List<Team> teams = viewService.getTeamsByLeague(leagueId);
+        model.addAttribute("teams", teams);
+
+        return "teams";
+    }
+
+    @GetMapping(path="/teams/statistics/{leagueId}")
+    public String getTeamStatisticsByLeague(@PathVariable("leagueId") String leagueId, Model model) {
+
+        List<Team> teams = viewService.getTeamsByLeague(leagueId);
+        Collections.sort(teams);
+
+        model.addAttribute("teams", teams);
+
+        return "teamStatistics";
+    }
+
     @GetMapping(path="/players")
     public String getPlayers(Model model) {
 
         List<Player> players = viewService.getPlayers();
+        Map<String,Country> countryMap = viewService.getCountryMap(players);
+        model.addAttribute("players", players);
+        model.addAttribute("countryMap", countryMap);
+
+        return "players";
+    }
+
+    @GetMapping(path="/players/{teamId}")
+    public String getPlayers(@PathVariable("teamId") String teamId, Model model) {
+
+        List<Player> players = viewService.getPlayersByTeam(teamId);
         Map<String,Country> countryMap = viewService.getCountryMap(players);
         model.addAttribute("players", players);
         model.addAttribute("countryMap", countryMap);

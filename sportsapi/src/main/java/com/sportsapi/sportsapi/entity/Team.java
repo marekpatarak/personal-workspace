@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity(name="team")
-public class Team {
+public class Team implements Comparable{
 
     @Id
     private Integer teamId;
@@ -23,6 +23,9 @@ public class Team {
     private Integer venueCapacity;
     @OneToMany(mappedBy = "team")
     private List<Player> players;
+
+    @OneToOne(mappedBy = "team")
+    private TeamStatistics teamStatistics;
 
     public Team() {
     }
@@ -115,6 +118,14 @@ public class Team {
         this.players = players;
     }
 
+    public TeamStatistics getTeamStatistics() {
+        return teamStatistics;
+    }
+
+    public void setTeamStatistics(TeamStatistics teamStatistics) {
+        this.teamStatistics = teamStatistics;
+    }
+
     @Override
     public String toString() {
         return "Team{" +
@@ -146,5 +157,15 @@ public class Team {
             return team;
         }
         return null;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Team otherTeam = (Team)o;
+        if(teamStatistics.getPoints() < otherTeam.getTeamStatistics().getPoints()) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

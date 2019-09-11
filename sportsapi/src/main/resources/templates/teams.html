@@ -19,6 +19,7 @@
 			<th>Venue Capacity</th>
 			<th>League</th>
 			<th>Country</th>
+			<th>Players</th>
 		</tr>
 	    </thead>
 	    <tbody>
@@ -30,7 +31,8 @@
 			<td th:text="${team.venueCapacity}"></td>
 			<td><img style="width: 50px" th:src="${team.getLeague().getLogo()}"></img></td>
 			<td><img style="width: 50px" th:src="${team.getLeague().getCountry().getFlag()}"></img></td>
-	    </tr>
+			<td><a th:href="${'../players/' + team.teamId}" th:text="Players"/></td>
+		</tr>
 	    </tbody>
 	</table>
 </div>

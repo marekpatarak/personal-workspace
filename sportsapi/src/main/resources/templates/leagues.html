@@ -18,6 +18,9 @@
 			<th>Season Start</th>
 			<th>Season End</th>
 			<th>Country</th>
+			<th>Team Profiles</th>
+			<th>Team Statistics</th>
+
 		</tr>
 	    </thead>
 	    <tbody>
@@ -28,6 +31,9 @@
 			<td th:text="${leagues.seasonStart}"></td>
 			<td th:text="${leagues.seasonEnd}"></td>
 			<td><img style="width: 50px" th:src="${leagues.getCountry().getFlag()}"></img></td>
+			<td><a th:href="${'../teams/' + leagues.leagueId}" th:text="Profiles"/></td>
+			<td><a th:href="${'../teams/statistics/' + leagues.leagueId}" th:text="Statistics"/></td>
+
 		</tr>
 	    </tbody>
 	</table>
