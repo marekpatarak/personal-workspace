@@ -3,7 +3,6 @@
 <head>
     <title>Countries</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
 </head>
 <body>
 <header th:insert="../fragments/header.html"></header>
@@ -15,14 +14,22 @@
 			<th>Flag</th>
 	        <th>Code</th>
 	        <th>Country</th>
-	    </tr>
+			<th>Leagues</th>
+			<th>Teams</th>
+			<th>Players(by Nationality)</th>
+
+		</tr>
 	    </thead>
 	    <tbody>
-	    <tr th:each="countries : ${countries}">
-			<td><img style="width: 50px" th:src="${countries.flag}"></img></td>
-	  		<td th:text="${countries.code}"></td>
-			<td th:text="${countries.countryName}"></td>
-	    </tr>
+	    <tr th:each="country : ${countries}">
+			<td><img style="width: 50px" th:src="${country.flag}"></img></td>
+	  		<td th:text="${country.code}"></td>
+			<td th:text="${country.countryName}"></td>
+			<td><a th:href="${'../leagues/country/' + country.countryId}"><i class="fa fa-trophy text-black-50"></i></a></td>
+			<td><a th:href="${'../teams/country/' + country.countryId}"><i class="fa fa-navicon text-black-50"></i></a></td>
+			<td><a th:href="${'../players/country/' + country.countryId}"><i class="fa fa-group text-black-50"></i></a></td>
+
+		</tr>
 	    </tbody>
 	</table>
 </div>

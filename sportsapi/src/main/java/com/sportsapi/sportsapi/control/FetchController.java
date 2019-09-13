@@ -1,10 +1,13 @@
 package com.sportsapi.sportsapi.control;
 
+import com.sportsapi.sportsapi.entity.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequestMapping(path="/fetch")
@@ -13,12 +16,8 @@ public class FetchController {
     @Autowired
     FetchService fetchService;
 
-
-    @GetMapping(path="/test")
-    public String fetchTest() {
-
-        return "success";
-    }
+    @Autowired
+    ViewService viewService;
 
     @GetMapping(path="/countries")
     public String fetchCountries() {
@@ -53,10 +52,23 @@ public class FetchController {
         return "success";
     }
 
-    @GetMapping(path="/statistics/{teamid}")
+    @GetMapping(path="/statistics/team/{teamid}")
     public String fetchTeamStatisticsByTeam(@PathVariable("teamid") String teamid) {
 
         fetchService.fetchData(DataFetchType.TEAMSTATISTICS, teamid);
+
+        return "success";
+    }
+
+    @GetMapping(path="/statistics/league/{leagueid}")
+    public String fetchTeamStatisticsByLeague(@PathVariable("leagueid") String leagueid) {
+
+        List<Team> teams = viewService.getTeamsByLeague(leagueid);
+
+        teams.stream().forEach(x-> {
+            fetchService.fetchData(DataFetchType.TEAMSTATISTICS, String.valueOf(x.getTeamId()));
+
+        });
 
         return "success";
     }

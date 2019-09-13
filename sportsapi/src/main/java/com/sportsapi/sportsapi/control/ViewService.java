@@ -8,6 +8,7 @@ import com.sportsapi.sportsapi.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +43,11 @@ public class ViewService {
     public List<League> getLeagues() {
 
         return (List<League>)leagueRepository.findAll();
+    }
+
+    public List<League> getLeaguesByCountry(String countryId) {
+
+        return leagueRepository.findAllByCountry_CountryId(Integer.parseInt(countryId));
     }
 
     public List<Team> getTeams() {
@@ -83,8 +89,20 @@ public class ViewService {
         return teamsRepository.findTeamsByLeague_LeagueId(Integer.parseInt(leagueId));
     }
 
+    public List<Team> getTeamsByCountry(String countryId) {
+        List<League> leaguesInCountry = leagueRepository.findAllByCountry_CountryId(Integer.parseInt(countryId));
+        List<Team> teamsInCountry = new ArrayList<>();
+        leaguesInCountry.stream().forEach(x -> teamsInCountry.addAll(teamsRepository.findTeamsByLeague_LeagueId(x.getLeagueId())));
+        return teamsInCountry;
+    }
+
     public List<Player> getPlayersByTeam(String teamId) {
         return playersRepository.findPlayersByTeam_TeamId(Integer.parseInt(teamId));
+    }
+
+    public List<Player> getPlayersByCountry(String countryId) {
+        Country country = countryRepository.findById(Integer.parseInt(countryId)).get();
+        return playersRepository.findPlayersByNationalityEquals(country.getCountryName());
     }
 }
 

@@ -58,6 +58,14 @@ public class ViewController {
         return "leagues";
     }
 
+    @GetMapping(path="/leagues/country/{countryid}")
+    public String getLeaguesByCountry(@PathVariable("countryid") String countryId, Model model) {
+
+        List<League> leagues = viewService.getLeaguesByCountry(countryId);
+        model.addAttribute("leagues", leagues);
+        return "leagues";
+    }
+
     @GetMapping(path="/teams")
     public String getTeams(Model model) {
 
@@ -71,6 +79,15 @@ public class ViewController {
     public String getTeamsByLeague(@PathVariable("leagueId") String leagueId, Model model) {
 
         List<Team> teams = viewService.getTeamsByLeague(leagueId);
+        model.addAttribute("teams", teams);
+
+        return "teams";
+    }
+
+    @GetMapping(path="/teams/country/{countryId}")
+    public String getTeamsByCountry(@PathVariable("countryId") String countryId, Model model) {
+
+        List<Team> teams = viewService.getTeamsByCountry(countryId);
         model.addAttribute("teams", teams);
 
         return "teams";
@@ -107,6 +124,23 @@ public class ViewController {
         model.addAttribute("countryMap", countryMap);
 
         return "players";
+    }
+    @GetMapping(path="/players/country/{countryId}")
+    public String getPlayersByCountry(@PathVariable("countryId") String countryId, Model model) {
+
+        List<Player> players = viewService.getPlayersByCountry(countryId);
+        Map<String,Country> countryMap = viewService.getCountryMap(players);
+
+        model.addAttribute("players", players);
+        model.addAttribute("countryMap", countryMap);
+
+        return "players";
+    }
+
+    @GetMapping(path="/admin")
+    public String getAdminPage() {
+
+        return "admin";
     }
 
 

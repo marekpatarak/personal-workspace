@@ -3,7 +3,6 @@
 <head>
     <title>Leagues</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
 </head>
 <body>
 <header th:insert="../fragments/header.html"></header>
@@ -24,15 +23,15 @@
 		</tr>
 	    </thead>
 	    <tbody>
-	    <tr th:each="leagues : ${leagues}">
-			<td><img style="width: 50px" th:src="${leagues.logo}"></img></td>
-	  		<td th:text="${leagues.name}"></td>
-			<td th:text="${leagues.season}"></td>
-			<td th:text="${leagues.seasonStart}"></td>
-			<td th:text="${leagues.seasonEnd}"></td>
-			<td><img style="width: 50px" th:src="${leagues.getCountry().getFlag()}"></img></td>
-			<td><a th:href="${'../teams/' + leagues.leagueId}" th:text="Profiles"/></td>
-			<td><a th:href="${'../teams/statistics/' + leagues.leagueId}" th:text="Statistics"/></td>
+	    <tr th:each="league : ${leagues}">
+			<td><img style="width: 50px" th:src="${league.logo}"></img></td>
+	  		<td th:text="${league.name}"></td>
+			<td th:text="${league.season}"></td>
+			<td th:text="${league.seasonStart}"></td>
+			<td th:text="${league.seasonEnd}"></td>
+			<td><img style="width: 50px" th:src="${league.getCountry().getFlag()}"></img></td>
+			<td><a th:href="${'../teams/' + league.leagueId}" th:text="Profiles"/></td>
+			<td><a th:href="${'../teams/statistics/' + league.leagueId}" th:text="Statistics"/></td>
 
 		</tr>
 	    </tbody>

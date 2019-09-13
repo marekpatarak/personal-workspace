@@ -10,4 +10,6 @@ public interface PlayerRepository extends CrudRepository<Player, Integer>{
 
     public List<Player> findPlayersByTeam_TeamId(Integer teamId);
 
+    List<Player> findPlayersByNationalityEquals(String countryName);
+
 }

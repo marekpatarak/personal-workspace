@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link href="../static/bootstrap-4.2.1-dist/css/bootstrap.css" rel="stylesheet" th:href="@{/bootstrap-4.2.1-dist/css/bootstrap.css}"/>
+</head>
+<body>
+<header th:insert="../fragments/header.html"></header>
+  <h2>Players</h2>
+	<div class="container-fluid">
+    	<table class="table table-striped">
+	    <thead>
+	    <tr>
+			<th>Action</th>
+	        <th>Param</th>
+	        <th>Button</th>
+		</tr>
+	    </thead>
+	    <tbody>
+	    <tr>
+			<td>Fetch countries</td>
+	  		<td></td>
+			<td><a class="btn btn-primary" href="../fetch/countries" role="button">Fetch</a></td>
+		</tr>
+		<tr>
+
+			<td>Fetch leagues</td>
+			<td></td>
+			<td><a href="../fetch/leagues" text="Fetch"/></td>
+		</tr>
+	    </tbody>
+	</table>
+</div>
+</body>
+</html>
