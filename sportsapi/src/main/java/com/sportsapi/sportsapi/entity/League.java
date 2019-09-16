@@ -1,11 +1,15 @@
 package com.sportsapi.sportsapi.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONObject;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name="league")
+@Getter
+@Setter
 public class League {
 
     // Premier league id = 524
@@ -32,86 +36,6 @@ public class League {
     public League() {
 
     }
-    public Integer getLeagueId() {
-        return leagueId;
-    }
-
-    public void setLeagueId(Integer leagueId) {
-        this.leagueId = leagueId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
-    public Integer getSeason() {
-        return season;
-    }
-
-    public void setSeason(Integer season) {
-        this.season = season;
-    }
-
-    public String getSeasonStart() {
-        return seasonStart;
-    }
-
-    public void setSeasonStart(String seasonStart) {
-        this.seasonStart = seasonStart;
-    }
-
-    public String getSeasonEnd() {
-        return seasonEnd;
-    }
-
-    public void setSeasonEnd(String seasonEnd) {
-        this.seasonEnd = seasonEnd;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    public Boolean getStandings() {
-        return standings;
-    }
-
-    public void setStandings(Boolean standings) {
-        this.standings = standings;
-    }
-
-    public Boolean getIsCurrent() {
-        return isCurrent;
-    }
-
-    public void setIsCurrent(Boolean isCurrent) {
-        this.isCurrent = isCurrent;
-    }
-
-    public List<Team> getTeams() {
-        return teams;
-    }
-
-    public void setTeams(List<Team> teams) {
-        this.teams = teams;
-    }
-
     @Override
     public String toString() {
         return "League{" +

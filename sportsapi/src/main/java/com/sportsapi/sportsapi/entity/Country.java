@@ -1,11 +1,15 @@
 package com.sportsapi.sportsapi.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONObject;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name="country")
+@Getter
+@Setter
 public class Country {
 
     @Id
@@ -20,46 +24,6 @@ public class Country {
     private List<League> leagues;
 
     public Country() {
-    }
-
-    public Integer getCountryId() {
-        return countryId;
-    }
-
-    public void setCountryId(int countryId) {
-        this.countryId = countryId;
-    }
-
-    public String getCountryName() {
-        return countryName;
-    }
-
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getFlag() {
-        return flag;
-    }
-
-    public void setFlag(String flag) {
-        this.flag = flag;
-    }
-
-    public List<League> getLeagues() {
-        return leagues;
-    }
-
-    public void setLeagues(List<League> leagues) {
-        this.leagues = leagues;
     }
 
     @Override

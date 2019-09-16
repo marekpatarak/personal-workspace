@@ -1,11 +1,15 @@
 package com.sportsapi.sportsapi.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONObject;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity(name="team")
+@Getter
+@Setter
 public class Team implements Comparable{
 
     @Id
@@ -28,102 +32,6 @@ public class Team implements Comparable{
     private TeamStatistics teamStatistics;
 
     public Team() {
-    }
-
-    public Integer getTeamId() {
-        return teamId;
-    }
-
-    public void setTeamId(Integer teamId) {
-        this.teamId = teamId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    public League getLeague() {
-        return league;
-    }
-
-    public void setLeague(League league) {
-        this.league = league;
-    }
-
-    public Integer getFounded() {
-        return founded;
-    }
-
-    public void setFounded(Integer founded) {
-        this.founded = founded;
-    }
-
-    public String getVenueName() {
-        return venueName;
-    }
-
-    public void setVenueName(String venueName) {
-        this.venueName = venueName;
-    }
-
-    public String getVenueAddress() {
-        return venueAddress;
-    }
-
-    public void setVenueAddress(String venueAddress) {
-        this.venueAddress = venueAddress;
-    }
-
-    public String getVenueCity() {
-        return venueCity;
-    }
-
-    public void setVenueCity(String venueCity) {
-        this.venueCity = venueCity;
-    }
-
-    public Integer getVenueCapacity() {
-        return venueCapacity;
-    }
-
-    public void setVenueCapacity(Integer venueCapacity) {
-        this.venueCapacity = venueCapacity;
-    }
-
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
-
-    public TeamStatistics getTeamStatistics() {
-        return teamStatistics;
-    }
-
-    public void setTeamStatistics(TeamStatistics teamStatistics) {
-        this.teamStatistics = teamStatistics;
     }
 
     @Override

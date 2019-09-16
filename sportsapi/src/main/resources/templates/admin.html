@@ -7,7 +7,7 @@
 </head>
 <body>
 <header th:insert="../fragments/header.html"></header>
-  <h2>Players</h2>
+  <h2>Admin</h2>
 	<div class="container-fluid">
     	<table class="table table-striped">
 	    <thead>
@@ -19,15 +19,58 @@
 	    </thead>
 	    <tbody>
 	    <tr>
-			<td>Fetch countries</td>
+			<td>Fetch and persist countries</td>
 	  		<td></td>
 			<td><a class="btn btn-primary" href="../fetch/countries" role="button">Fetch</a></td>
 		</tr>
 		<tr>
-
-			<td>Fetch leagues</td>
-			<td></td>
-			<td><a href="../fetch/leagues" text="Fetch"/></td>
+			<form id="fetchLeague" action="../fetch/leagues/">
+				<td>Fetch and persist league by ID</td>
+				<td><input class="form-control" type="text" name="leagueId"/></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchTeamsByLeagueId" action="../fetch/teams/">
+				<td>Fetch and persist teams by league ID</td>
+				<td><input class="form-control" type="text" name="leagueId"/></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchPlayersByTeamId" action="../fetch/players/">
+				<td>Fetch and persist players by team ID</td>
+				<td><input class="form-control" type="text" name="teamId"/></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchTeamStatsByTeamId" action="../fetch/teamstatistics/">
+				<td>Fetch and persist team statistics by team ID</td>
+				<td><input class="form-control" type="text" name="teamId"/></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchTeamStatsByLeagueId" action="../fetch/teamstatistics/">
+				<td>Fetch and persist team statistics for all teams by league ID</td>
+				<td><input class="form-control" type="text" name="leagueId"/></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchPlayerStatsByPlayerId" action="../fetch/playerstatistics/">
+				<td>Fetch and persist player statistics by player Id</td>
+				<td><input class="form-control" type="text" name="playerId" /></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
+		</tr>
+		<tr>
+			<form id="fetchPlayerStatsByTeamId" action="../fetch/playerstatistics/">
+				<td>Fetch and persist player statistics for all players by team Id</td>
+				<td><input class="form-control" type="text" name="teamId" /></td>
+				<td><input class="btn btn-primary" type="submit" value="Fetch"/></td>
+			</form>
 		</tr>
 	    </tbody>
 	</table>

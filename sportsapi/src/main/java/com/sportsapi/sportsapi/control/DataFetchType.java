@@ -6,6 +6,7 @@ public enum DataFetchType {
     LEAGUES("leagues","/league/"),
     TEAMS("teams","/league/"),
     TEAMSTATISTICS("statistics","/"),
+    PLAYERSTATISTICS("players","/player/"),
     PLAYERS("players","/squad/");
 
 

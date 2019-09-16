@@ -36,6 +36,9 @@ public class FetchService {
     @Autowired
     private PlayerRepository playerRepository;
 
+    @Autowired
+    private PlayerStatisticsRepository playerStatisticsRepository;
+
     private static Logger logger = Logger.getLogger(FetchService.class.getCanonicalName());
 
     public void fetchData(DataFetchType dataFetchType, String param) {
@@ -100,6 +103,15 @@ public class FetchService {
                             playerRepository.save(player);
                             break;
 
+                        case PLAYERSTATISTICS:
+                            Player player1 = playerRepository.findById(Integer.parseInt(param)).get();
+                            if (player1.getTeam().getLeague().getName().equals((String)entityObject.get("league"))) {
+                                PlayerStatistics playerStatistics = PlayerStatistics.getPlayerStatisticsFromJsonObject(entityObject);
+                                playerStatistics.setPlayer(player1);
+                                playerStatisticsRepository.save(playerStatistics);
+                            }
+                            break;
+
                     }
 
                 }
@@ -129,6 +141,7 @@ public class FetchService {
                 url += dataFetchType.getUrlSuffix() + param;
                 break;
             case PLAYERS:
+            case PLAYERSTATISTICS:
                 url += dataFetchType.getUrlSuffix() + param + "/" + config.getProperty(Config.SEASON_2019);
                 break;
             case TEAMSTATISTICS:

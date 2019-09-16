@@ -1,13 +1,13 @@
 package com.sportsapi.sportsapi.control;
 
+import com.sportsapi.sportsapi.entity.Player;
 import com.sportsapi.sportsapi.entity.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(path="/fetch")
@@ -27,8 +27,9 @@ public class FetchController {
         return "success";
     }
 
-    @GetMapping(path="/leagues/{leagueId}")
-    public String fetchLeague(@PathVariable("leagueId") String leagueId) {
+    @GetMapping(path="/leagues/")
+    @ResponseBody
+    public String fetchLeague(@RequestParam("leagueId") String leagueId) {
 
         fetchService.fetchData(DataFetchType.LEAGUES, leagueId);
 
@@ -36,40 +37,63 @@ public class FetchController {
     }
 
 
-    @GetMapping(path="/teams/{leagueId}")
-    public String fetchTeamsByLeague(@PathVariable("leagueId") String leagueId) {
+    @GetMapping(path="/teams/")
+    @ResponseBody
+    public String fetchTeamsByLeague(@RequestParam("leagueId") String leagueId) {
 
         fetchService.fetchData(DataFetchType.TEAMS, leagueId);
 
         return "success";
     }
 
-    @GetMapping(path="/players/{teamid}")
-    public String fetchPlayersByTeam(@PathVariable("teamid") String teamId) {
+    @GetMapping(path="/players/")
+    @ResponseBody
+    public String fetchPlayersByTeam(@RequestParam("teamId") String teamId) {
 
         fetchService.fetchData(DataFetchType.PLAYERS, teamId);
 
         return "success";
     }
 
-    @GetMapping(path="/statistics/team/{teamid}")
-    public String fetchTeamStatisticsByTeam(@PathVariable("teamid") String teamid) {
+    @GetMapping(path="/teamstatistics/")
+    @ResponseBody
+    public String fetchTeamStatistics(@RequestParam Map<String,String> allParams) {
 
-        fetchService.fetchData(DataFetchType.TEAMSTATISTICS, teamid);
+        if (allParams.get("teamId") != null) {
+
+            fetchService.fetchData(DataFetchType.TEAMSTATISTICS, allParams.get("teamId"));
+
+        } else if (allParams.get("leagueId") != null) {
+            List<Team> teams = viewService.getTeamsByLeague(allParams.get("leagueId"));
+
+            teams.stream().forEach(x-> {
+                fetchService.fetchData(DataFetchType.TEAMSTATISTICS, String.valueOf(x.getTeamId()));
+
+            });
+        }
+
 
         return "success";
     }
 
-    @GetMapping(path="/statistics/league/{leagueid}")
-    public String fetchTeamStatisticsByLeague(@PathVariable("leagueid") String leagueid) {
+    @GetMapping(path="/playerstatistics/")
+    @ResponseBody
+    public String fetchPlayerStatistics(@RequestParam Map<String,String> allParams) {
 
-        List<Team> teams = viewService.getTeamsByLeague(leagueid);
+        if (allParams.get("playerId") != null) {
+            fetchService.fetchData(DataFetchType.PLAYERSTATISTICS, allParams.get("playerId"));
 
-        teams.stream().forEach(x-> {
-            fetchService.fetchData(DataFetchType.TEAMSTATISTICS, String.valueOf(x.getTeamId()));
+        } else if (allParams.get("teamId") != null) {
+            List<Player> players = viewService.getPlayersByTeam(allParams.get("teamId"));
 
-        });
+            players.stream().forEach(x-> {
+                fetchService.fetchData(DataFetchType.PLAYERSTATISTICS, String.valueOf(x.getPlayerId()));
+
+            });
+        }
+
 
         return "success";
     }
+
 }

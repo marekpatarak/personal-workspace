@@ -1,10 +1,14 @@
 package com.sportsapi.sportsapi.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONObject;
 
 import javax.persistence.*;
 
 @Entity(name="teamstatistics")
+@Getter
+@Setter
 public class TeamStatistics {
 
     @Id
@@ -24,102 +28,6 @@ public class TeamStatistics {
     @JoinColumn(name="team_id")
     private Team team;
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getWinsHome() {
-        return winsHome;
-    }
-
-    public void setWinsHome(Integer winsHome) {
-        this.winsHome = winsHome;
-    }
-
-    public Integer getWinsAway() {
-        return winsAway;
-    }
-
-    public void setWinsAway(Integer winsAway) {
-        this.winsAway = winsAway;
-    }
-
-    public Integer getDrawsHome() {
-        return drawsHome;
-    }
-
-    public void setDrawsHome(Integer drawsHome) {
-        this.drawsHome = drawsHome;
-    }
-
-    public Integer getDrawsAway() {
-        return drawsAway;
-    }
-
-    public void setDrawsAway(Integer drawsAway) {
-        this.drawsAway = drawsAway;
-    }
-
-    public Integer getLosesHome() {
-        return losesHome;
-    }
-
-    public void setLosesHome(Integer losesHome) {
-        this.losesHome = losesHome;
-    }
-
-    public Integer getLosesAway() {
-        return losesAway;
-    }
-
-    public void setLosesAway(Integer losesAway) {
-        this.losesAway = losesAway;
-    }
-
-    public Integer getGoalsForHome() {
-        return goalsForHome;
-    }
-
-    public void setGoalsForHome(Integer goalsForHome) {
-        this.goalsForHome = goalsForHome;
-    }
-
-    public Integer getGoalsForAway() {
-        return goalsForAway;
-    }
-
-    public void setGoalsForAway(Integer goalsForAway) {
-        this.goalsForAway = goalsForAway;
-    }
-
-    public Integer getGoalsAgainstHome() {
-        return goalsAgainstHome;
-    }
-
-    public void setGoalsAgainstHome(Integer goalsAgainstHome) {
-        this.goalsAgainstHome = goalsAgainstHome;
-    }
-
-    public Integer getGoalsAgainstAway() {
-        return goalsAgainstAway;
-    }
-
-    public void setGoalsAgainstAway(Integer goalsAgainstAway) {
-        this.goalsAgainstAway = goalsAgainstAway;
-    }
-
-    public Team getTeam() {
-        return team;
-    }
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
 
     public Integer getPoints() {
         Integer points = 0;
