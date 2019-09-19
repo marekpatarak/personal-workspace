@@ -23,7 +23,7 @@
       <file leaf-file-name="CalculatorStreamTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/dk/cngroup/kata/CalculatorStreamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
+            <state relative-caret-position="2256">
               <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
               <folding />
             </state>
@@ -33,7 +33,7 @@
       <file leaf-file-name="CalculatorStream.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dk/cngroup/kata/CalculatorStream.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
+            <state relative-caret-position="1368">
               <caret line="58" column="95" lean-forward="false" selection-start-line="58" selection-start-column="95" selection-end-line="58" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,12 +42,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlackJack.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dk/cngroup/kata/BlackJack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+              <folding>
+                <element signature="e#3082#3083#0" expanded="true" />
+                <element signature="e#3157#3158#0" expanded="true" />
+                <element signature="e#3522#3523#0" expanded="true" />
+                <element signature="e#3564#3565#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,6 +103,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dk/cngroup/kata/CalculatorPrim.java" />
         <option value="$PROJECT_DIR$/src/main/java/dk/cngroup/kata/CalculatorStream.java" />
         <option value="$PROJECT_DIR$/src/test/java/dk/cngroup/kata/CalculatorStreamTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dk/cngroup/kata/BlackJack.java" />
       </list>
     </option>
   </component>
@@ -105,10 +121,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-577" />
-    <option name="y" value="170" />
-    <option name="width" value="2902" />
-    <option name="height" value="1582" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -125,8 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,8 +248,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,13 +276,32 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorStreamTest.shouldSupportDelimsOfAnyLength">
+  <component name="RunManager" selected="Application.BlackJack">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="BlackJack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dk.cngroup.kata.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="dk.cngroup.kata.BlackJack" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="kata" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -320,31 +355,6 @@
       <option name="PACKAGE_NAME" value="dk.cngroup.kata" />
       <option name="MAIN_CLASS_NAME" value="dk.cngroup.kata.CalculatorStreamTest" />
       <option name="METHOD_NAME" value="shouldReturnSumWhenNewLines" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="CalculatorStreamTest.shouldReturnSumWhenUnlimitedNums" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dk.cngroup.kata.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="kata" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dk.cngroup.kata" />
-      <option name="MAIN_CLASS_NAME" value="dk.cngroup.kata.CalculatorStreamTest" />
-      <option name="METHOD_NAME" value="shouldReturnSumWhenUnlimitedNums" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -469,18 +479,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenUnlimitedNums" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenNewLines" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldThrowExceptionWhenNegatives" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldSupportDelimsOfAnyLength" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenNewLines" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldThrowExceptionWhenNegatives" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldSupportDelimsOfAnyLength" />
+      <item index="4" class="java.lang.String" itemvalue="Application.BlackJack" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldSupportDelimsOfAnyLength" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BlackJack" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldThrowExceptionWhenNegatives" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenNewLines" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenUnlimitedNums" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldSupportDelimsOfAnyLength" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldThrowExceptionWhenNegatives" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorStreamTest.shouldReturnSumWhenNewLines" />
       </list>
     </recent_temporary>
   </component>
@@ -504,13 +514,11 @@
       <workItem from="1566326209794" duration="7707000" />
       <workItem from="1566401652194" duration="3085000" />
       <workItem from="1567430158900" duration="18380000" />
+      <workItem from="1568832467247" duration="4047000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CalculatorStreamTest - 2019.09.03 at 13h 38m 43s.xml">
-      <configuration name="CalculatorStreamTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CalculatorStreamTest - 2019.09.03 at 13h 41m 41s.xml">
       <configuration name="CalculatorStreamTest" configurationId="JUnit" />
     </history-entry>
@@ -518,6 +526,9 @@
       <configuration name="CalculatorStreamTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CalculatorStreamTest - 2019.09.03 at 14h 15m 55s.xml">
+      <configuration name="CalculatorStreamTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorStreamTest - 2019.09.18 at 21h 19m 24s.xml">
       <configuration name="CalculatorStreamTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CalculatorStreamTest_shouldSupportDelimsOfAnyLength - 2019.09.03 at 14h 23m 48s.xml">
@@ -540,7 +551,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39374000" />
+    <option name="totallyTimeSpent" value="43421000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -552,7 +563,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="2418" height="1468" extended-state="7" />
+    <frame x="-9" y="-9" width="2418" height="1318" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -565,19 +576,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21131186" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3526269" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13733906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16781116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3985932" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -619,16 +630,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/dk/cngroup/kata/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dk/cngroup/commonproblems/CommonProblems.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -920,7 +921,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dk/cngroup/kata/CalculatorStreamTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
+        <state relative-caret-position="2256">
           <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
           <folding />
         </state>
@@ -928,7 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dk/cngroup/kata/CalculatorStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
+        <state relative-caret-position="1368">
           <caret line="58" column="95" lean-forward="false" selection-start-line="58" selection-start-column="95" selection-end-line="58" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -938,9 +939,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dk/cngroup/kata/BlackJack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+          <folding>
+            <element signature="e#3082#3083#0" expanded="true" />
+            <element signature="e#3157#3158#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3564#3565#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
