@@ -5,14 +5,13 @@ import com.pluralsight.repository.HibernateCustomerRepositoryImpl;
 import com.pluralsight.service.CustomerService;
 import com.pluralsight.service.CustomerServiceImpl;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 // autowiring
 @ComponentScan({"com.pluralsight"})
+@PropertySource("app.properties")
 public class AppConfig {
 
 //     automatic discovery of bean with @Repository annotation on HibernateCustomerRepo...
@@ -39,6 +38,11 @@ public class AppConfig {
 //        CustomerService customerService = new CustomerServiceImpl();
 
         return customerService;
+    }
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
     }
 
 }
