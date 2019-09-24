@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Built-By: patarak
-Created-By: IntelliJ IDEA
-Build-Jdk: 1.8.0_92
-
